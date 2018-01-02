@@ -20,4 +20,5 @@ Lanucher is the interface of the first user graphical interaction of the Android
 
 ### [DuerOS Launcher](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/DuerOS-Launcher) Features:
 1.For the driving scene design, using lightweight, scientific sense of the UI design
+
 2.The home page aggregated voice, maps, music and other entrances, the car scene is more convenient to use

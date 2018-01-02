@@ -17,5 +17,6 @@ Lanucher是android终端机上首个用户图形交互的界面，是启动安�
 ![Launcher Screen](Launcher.png)
 ### [DuerOS Launcher](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/DuerOS-Launcher)有如下特点:
 1.针对驾驶场景设计，采用轻量化、科技感的UI设计
+
 2.主页聚合了语音，地图，音乐等入口，车载场景使用更加便捷
 
