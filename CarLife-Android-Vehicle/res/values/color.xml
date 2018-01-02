@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<resources>
+
+    <color name="common_title_color_title">#313233</color>
+    <color name="common_list_main_text_color">#313233</color>
+    <color name="common_list_second_text_color">#abaeb2</color>
+    <color name="common_black">#ff3f484b</color>
+
+    <!-- titlebar -->
+    <color name="com_titlebar_bg">#3477eb</color>
+    <color name="com_titlebar_bg_night">#161a2a</color>
+    <color name="com_titlebar_middle_text">#ffffff</color>
+    <color name="com_titlebar_middle_text_night">#969bc6</color>
+
+    <!-- Fragment -->
+    <color name="frag_default_background_color">#1b324d</color>
+    <color name="cl_bg_c_main">#111217</color>
+    <!-- Page color uniform style START -->
+    <color name="cp_bt_bg">#122133</color>
+    <color name="cp_tab_bg">#15263b</color>
+    <color name="cp_cont_bg">#1b324d</color>
+    <color name="cp_normal_bg">#244366</color>
+    <color name="cp_press_a">#3e75b3</color>
+    <color name="cp_press_b">#33000000</color>
+    <color name="cp_line_a">#32475f</color>
+    <color name="cp_line_b">#405a78</color>
+    <color name="cp_line_c">#33ffffff</color>
+    <color name="cp_line_d">#244366</color>
+    <color name="cp_line_e">#19ffffff</color>
+    <color name="cp_line_f">#19000000</color>
+    <color name="cp_line_g">#33000000</color>
+    <color name="cp_label_bg">#182d45</color>
+    <color name="cp_cont_u">#3b434d</color>
+    <color name="cp_cont_b">#627080</color>
+    <color name="cp_cont_c">#768699</color>
+    <color name="cp_cont_a">#9db3cc</color>
+    <color name="cp_cont_f">#ffffff</color>
+    <color name="cp_cont_e">#426792</color>
+    <color name="cp_cont_g">#73b4ff</color>
+    <color name="cp_cont_h">#ff535f</color>
+    <color name="cp_cont_i">#b2ffffff</color>
+    <color name="cp_cont_m">#303133</color>
+    <color name="cp_cont_n">#787b80</color>
+    <color name="cp_other_a">#0c94d3</color>
+    <color name="cp_other_b">#ff3b30</color>
+    <color name="cp_other_c">#0257ff</color>
+    <color name="cp_other_d">#3295e5</color>
+    <!-- Page color uniform style END -->
+    <color name="cp_click_c">#2d84cc</color>
+    <color name="cp_click_e">#393d4c</color>
+    <color name="cp_press_e">#262833</color>
+    <color name="cp_cont_d">#b2ffffff</color>
+    <color name="bg_blue">#366499</color>
+    <color name="cl_press_b">#003366</color>
+    <color name="cl_btn_d">#cc22c064</color>
+    <color name="cl_press_d">#ff126635</color>
+    <!-- normal button , such as the abort button  -->
+    <color name="cl_btn_c">#ffcc1237</color>
+    <!-- A button pressed state, such as the button to press the abolition of color values  -->
+    <color name="cl_press_c">#66091c</color>
+    <!-- button normal state, such as feedback feedback submit button  -->
+    <color name="cl_btn_b">#0080ff</color>
+    
+    <color name="cl_text_a5_content">#ffffff</color>
+    <color name="cl_text_a2_content">#80ffffff</color>
+
+	<!-- The title color in the dialog box  -->
+    <color name="cl_text_b_dialog">#333333</color>
+    <!-- The left column divides the line  -->
+    <color name="cl_line_b_leftbar">#2b3047</color>
+    <color name="cl_line_c">#4dff1745</color>
+    <color name="cl_line_d_dialog">#c6c6c6</color>
+    <!-- The color of the button text in the dialog box -->
+    <color name="cl_text_c_btn_dialog">#666666</color>	
+    <!--   The background color of button pressed status in dialog  -->
+    <color name="cl_press_e_dialog">#dbdbdb</color>
+    <!-- dialog background color -->
+    <color name="cl_bg_e_dialog">#e8e8e8</color>
+	
+	<color name="cl_text_a4_title">#b3ffffff</color>
+	<!-- Auxiliary fonts on the title bar -->
+    <color name="cl_text_a0_title">#33ffffff</color>
+    <!-- Selected or highlighted text color  -->
+    <color name="cl_other_c_highlight">#0080ff</color>
+    <!-- Common list item dividing line color  -->
+    <color name="cl_line_a1_item">#0fffffff</color>
+	
+	<color name="cl_text_a4_bgtext">#b3ffffff</color>
+	<color name="cl_line_a4">#80ffffff</color>
+	
+	<color name="cl_text_a5_title">#ffffff</color>
+</resources>

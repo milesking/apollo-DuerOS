@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CarLife-Vehicle" default="help">
+
+    <!--
+         The local.properties file is created and updated by the 'android' tool.
+         It contains the path to the SDK. It should *NOT* be checked into
+         Version Control Systems.
+    -->
+
+    <tstamp prefix="time">
+
+        <format pattern="yyyy-MM-dd_HH-mm-ss" property="dt" />
+    </tstamp>
+
+    <property file="local.properties" />
+
+    <!--
+         The ant.properties file can be created by you. It is only edited by the
+         'android' tool to add properties to it.
+         This is the place to change some Ant specific build properties.
+         Here are some properties you may want to change/update:
+
+         source.dir
+             The name of the source directory. Default is 'src'.
+         out.dir
+             The name of the output directory. Default is 'bin'.
+
+         For other overridable properties, look at the beginning of the rules
+         files in the SDK, at tools/ant/build.xml
+
+         Properties related to the SDK location or the project target should
+         be updated using the 'android' tool with the 'update' action.
+
+         This file is an integral part of the build system for your
+         application and should be checked into Version Control Systems.
+    -->
+
+
+    <!--
+         if sdk.dir was not set from one of the property file, then
+         get it from the ANDROID_HOME env var.
+         This must be done before we load project.properties since
+         the proguard config can use sdk.dir
+    -->
+
+    <property environment="env" />
+
+    <condition property="sdk.dir" value="${env.ANDROID_HOME}">
+
+        <isset property="env.ANDROID_HOME" />
+    </condition>
+
+    <condition property="sdk.dir" value="${env.ANDROID_SDK_HOME}">
+
+        <isset property="env.ANDROID_SDK_HOME" />
+    </condition>
+
+    <property file="ant.properties" />
+    <!--
+         The project.properties file is created and updated by the 'android'
+         tool, as well as ADT.
+
+         This contains project specific properties such as project target, and library
+         dependencies. Lower level build properties are stored in ant.properties
+         (or in .classpath for Eclipse projects).
+
+         This file is an integral part of the build system for your
+         application and should be checked into Version Control Systems.
+    -->
+
+
+    <!-- <loadproperties srcFile="project.properties" /> -->
+
+
+    <!-- quick check on sdk.dir -->
+
+    <fail
+        message="sdk.dir is missing. Make sure to generate local.properties using &apos;android update project&apos; or to inject it through the ANDROID_HOME environment variable."
+        unless="sdk.dir" />
+
+    <!--
+        Import per project custom build rules if present at the root of the project.
+        This is the place to put custom intermediary targets such as:
+            -pre-build
+            -pre-compile
+            -post-compile (This is typically used for code obfuscation.
+                           Compiled code location: ${out.classes.absolute.dir}
+                           If this is not done in place, override ${out.dex.input.absolute.dir})
+            -post-package
+            -post-build
+            -pre-clean
+    -->
+
+
+    <!-- <import file="custom_rules.xml" optional="true" /> -->
+
+
+    <!--
+         Import the actual build file.
+
+         To customize existing targets, there are two options:
+         - Customize only one target:
+             - copy/paste the target into this file, *before* the
+               <import> task.
+             - customize it to your needs.
+         - Customize the whole content of build.xml
+             - copy/paste the content of the rules files (minus the top node)
+               into this file, replacing the <import> task.
+             - customize to your needs.
+
+         ***********************
+         ****** IMPORTANT ******
+         ***********************
+         In all cases you must update the value of version-tag below to read 'custom' instead of an integer,
+         in order to avoid having your file be overridden by tools such as "android update project"
+    -->
+    <!-- version-tag: 1 -->
+
+    <import file="${sdk.dir}/tools/ant/build.xml" />
+
+    <target name="icon-normal">
+
+        <replaceregexp byline="true" encoding="utf-8" file="AndroidManifest.xml"
+            match="android:icon=&quot;@drawable/ic_launcher.*&quot;"
+            replace="android:icon=&quot;@drawable/ic_launcher&quot;"></replaceregexp>
+    </target>
+
+    <target name="icon-changan">
+
+        <replaceregexp byline="true" encoding="utf-8" file="AndroidManifest.xml"
+            match="android:icon=&quot;@drawable/ic_launcher.*&quot;"
+            replace="android:icon=&quot;@drawable/ic_launcher_changan&quot;"></replaceregexp>
+    </target>
+
+    <target name="build-number-debug" if="env.BUILD_NUMBER">
+
+        <replaceregexp byline="true" encoding="utf-8"
+            file="src/com/baidu/carlifevehicle/CommonParams.java" match="BUILD_NUMBER = .*;"
+            replace="BUILD_NUMBER = &quot;d${env.BUILD_NUMBER}&quot;;"></replaceregexp>
+    </target>
+
+    <target name="build-number-release" if="env.BUILD_NUMBER">
+
+        <replaceregexp byline="true" encoding="utf-8"
+            file="src/com/baidu/carlifevehicle/CommonParams.java" match="BUILD_NUMBER = .*;"
+            replace="BUILD_NUMBER = &quot;r${env.BUILD_NUMBER}&quot;;"></replaceregexp>
+    </target>
+
+    <target name="close-log">
+
+        <replaceregexp byline="true" encoding="utf-8"
+            file="src/com/baidu/carlifevehicle/CommonParams.java" match="LOG_LEVEL = Log.*;"
+            replace="LOG_LEVEL = Log.ERROR;"></replaceregexp>
+    </target>
+
+    <target name="open-log">
+
+        <replaceregexp byline="true" encoding="utf-8"
+            file="src/com/baidu/carlifevehicle/CommonParams.java" match="LOG_LEVEL = Log.*;"
+            replace="LOG_LEVEL = Log.VERBOSE;"></replaceregexp>
+    </target>
+
+    <target name="close-proguard">
+
+        <replaceregexp byline="true" file="ant.properties" match="^proguard\.config"
+            replace="#proguard\.config"></replaceregexp>
+    </target>
+
+    <target name="open-proguard">
+
+        <replaceregexp byline="true" file="ant.properties" match="^#proguard\.config"
+            replace="proguard\.config"></replaceregexp>
+    </target>
+
+    <target name="switch-normal">
+
+        <replaceregexp byline="true" encoding="utf-8"
+            file="src/com/baidu/carlifevehicle/CommonParams.java"
+            match="VEHICLE_CHANNEL = VEHICLE_CHANNEL_.*;"
+            replace="VEHICLE_CHANNEL = VEHICLE_CHANNEL_NORMAL;"></replaceregexp>
+    </target>
+
+    <target name="switch-aftermarket">
+
+        <replaceregexp byline="true" encoding="utf-8"
+            file="src/com/baidu/carlifevehicle/CommonParams.java"
+            match="VEHICLE_CHANNEL = VEHICLE_CHANNEL_.*;"
+            replace="VEHICLE_CHANNEL = VEHICLE_CHANNEL_AFTER_MARKET;"></replaceregexp>
+    </target>
+
+    <target name="switch-preinstallmarket">
+
+        <replaceregexp byline="true" encoding="utf-8"
+            file="src/com/baidu/carlifevehicle/CommonParams.java"
+            match="VEHICLE_CHANNEL = VEHICLE_CHANNEL_.*;"
+            replace="VEHICLE_CHANNEL = VEHICLE_CHANNEL_PREINSTALL_MARKET;"></replaceregexp>
+    </target>
+
+    <target name="autolaunch-on">
+
+        <replaceregexp byline="true" encoding="utf-8"
+            file="src/com/baidu/carlifevehicle/CommonParams.java" match="PULL_UP_VEHICLE = .*;"
+            replace="PULL_UP_VEHICLE = true;"></replaceregexp>
+    </target>
+
+    <target name="autolaunch-off">
+
+        <replaceregexp byline="true" encoding="utf-8"
+            file="src/com/baidu/carlifevehicle/CommonParams.java" match="PULL_UP_VEHICLE = .*;"
+            replace="PULL_UP_VEHICLE = false;"></replaceregexp>
+    </target>
+
+    <target name="carlife-vehicle-debug-normal"
+        depends="clean,icon-normal,autolaunch-off,switch-normal,release">
+
+        <copy file="bin/${ant.project.name}-release.apk"
+            tofile="out/${ant.project.name}-${time.dt}_Debug.apk" />
+    </target>
+
+    <target name="carlife-vehicle-release-normal"
+        depends="clean,icon-normal,autolaunch-off,switch-normal,release">
+
+        <copy file="bin/${ant.project.name}-release.apk"
+            tofile="out/${ant.project.name}-${time.dt}_Release.apk" />
+    </target>
+
+    <target name="carlife-vehicle-debug-aftermarket"
+        depends="clean,icon-normal,autolaunch-off,switch-aftermarket,release">
+
+        <copy file="bin/${ant.project.name}-release.apk"
+            tofile="out/${ant.project.name}-${time.dt}_AfterMarket_Debug.apk" />
+    </target>
+
+    <target name="carlife-vehicle-release-aftermarket"
+        depends="clean,icon-normal,autolaunch-off,switch-aftermarket,release">
+
+        <copy file="bin/${ant.project.name}-release.apk"
+            tofile="out/${ant.project.name}-${time.dt}_AfterMarket_Release.apk" />
+    </target>
+
+    <target name="carlife-vehicle-debug-aftermarket-autolaunch"
+        depends="clean,icon-normal,autolaunch-on,switch-aftermarket,release">
+
+        <copy file="bin/${ant.project.name}-release.apk"
+            tofile="out/${ant.project.name}-${time.dt}_AfterMarket_Debug_Autolaunch.apk" />
+    </target>
+
+    <target name="carlife-vehicle-release-aftermarket-autolaunch"
+        depends="clean,icon-normal,autolaunch-on,switch-aftermarket,release">
+
+        <copy file="bin/${ant.project.name}-release.apk"
+            tofile="out/${ant.project.name}-${time.dt}_AfterMarket_Release_Autolaunch.apk" />
+    </target>
+
+    <target name="carlife-vehicle-debug-preinstallmarket"
+        depends="clean,icon-normal,autolaunch-off,switch-preinstallmarket,release">
+
+        <copy file="bin/${ant.project.name}-release.apk"
+            tofile="out/${ant.project.name}-${time.dt}_PreinstallMarket_Debug.apk" />
+    </target>
+
+    <target name="carlife-vehicle-release-preinstallmarket"
+        depends="clean,icon-normal,autolaunch-off,switch-preinstallmarket,release">
+
+        <copy file="bin/${ant.project.name}-release.apk"
+            tofile="out/${ant.project.name}-${time.dt}_PreinstallMarket_Release.apk" />
+    </target>
+
+    <target name="carlife-vehicle-debug"
+        depends="open-log, close-proguard, build-number-debug"></target>
+
+    <target name="carlife-vehicle-release"
+        depends="close-log, open-proguard, build-number-release"></target>
+
+</project>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <!-- main -START -->
+    <string name="app_name">百度 CarLife</string>
+    <string name="version_code_prefix">百度 CarLife v</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="alert_quit">退出</string>
+    <string name="alert_quit_app_content">您确定要退出CarLife吗？</string>
+    <string name="alert_notification">提示</string>
+    <string name="alert_confirm">确定</string>
+    <string name="alert_cancel">取消</string>
+    <string name="baidu_logo">\@ 2014 Baidu</string>
+	<string name="baidu_help"><u>帮助</u></string>
+    <!-- main -END -->
+
+
+    <!-- connect -START -->
+    <string name="usb_connect_fail_not_surpport">连接失败，手机系统版本过低，暂不支持\n安卓4.1以下的手机</string>
+    <string name="usb_connect_fail_not_surpport2">连接失败，手机系统版本过低，暂不支持</string>
+    <string name="usb_connect_fail_install">手机端未安装CarLife，请扫描二维码下载</string>
+    <string name="usb_not_connected">请连接手机和车载系统</string>
+    <string name="connect_screenoff_hint">请点击手机端CarLife，且不要锁屏</string>
+    <string name="connect_background_hint">请点击手机端CarLife，且不要锁屏</string>
+    <string name="usb_connect_fail">请重新连接，如有问题可查看帮助</string>
+    <string name="usb_connect_aoa_no_permission">请退出手机CarLife后重新连接USB线</string>
+    <string name="usb_connect_aoa_accessory_mode">请退出手机CarLife后重新连接USB线</string>
+    <string name="usb_connect_aoa_request_md_permisson">请点击手机弹窗内“确定”，检查是否安装最新版本CarLife，或重新连接USB线</string>
+    <string name="usb_connect_aoa_not_support">连接失败，手机系统版本过低，暂不支持\n安卓5.0以下的手机</string>
+    <string name="usb_connect_aoa_change_adb">手机系统版本过低,更改连接方式\n重新连接中</string>
+    <string name="usb_connect_adb_notopen_aoa_notsupport">手机系统版本过低,请打开USB调试模式并重新连接</string>
+
+    <string name="usb_connect_btn_retry">重新连接</string>
+    <string name="video_give_permissions">如需继续使用CarLife，请重新连接手机并点击手机弹窗内的"允许"</string>
+    <string name="video_not_supported">非常抱歉，CarLife目前不支持该手机，请期待后续的更新支持，请谅解</string>
+    <string name="usb_switched">已切换至USB连接</string>
+    <string name="wifi_switched">已切换至WIFI连接</string>
+    <string name="line_is_busy">通话中</string>
+	<string name="line_is_coming">来电中</string>
+    <string name="incoming_calling">新的来电...</string>
+    <string name="accepting_calling">正在接听...</string>
+    <string name="answer_call">接听</string>
+    <string name="reject_call">拒接</string>
+    
+    <string name="connect_start_carlife">启动CarLife</string>
+    <string name="usb_connect_fail_timeout">连接超时，请重新连接。</string>
+    <string name="connect_diagnose_title">诊断建议</string>
+    <string name="conf_init_fail">读取配置文件失败，请重新启动CarLife或者检查配置文件是否正确!</string>
+    <!-- connect -END -->
+
+
+    <!-- setting -START -->
+    <string name="module_setting">设置</string>
+
+    <string-array name="carlife_setting_name">
+        <item>设置</item>
+        <item>帮助中心</item>
+        <item>关于</item>
+    </string-array>
+
+    <string name="module_custom_usb_ConnectType">USB连接方式 </string>
+    <string name="module_custom_wifi_ConnectType">WIFI连接方式 </string>
+    <string name="module_custom_wifi_default_ip">192.168.43.1</string>
+    <!-- setting -END -->
+
+
+    <!-- update -->
+    <string name="carlife_update_tips_dialog_confirm">马上更新</string>
+    <string name="carlife_update_tips_dialog_cancel">以后再说</string>
+    <string name="carlife_update_tips_dialog_title">更新提示</string>
+    <string name="carlife_update_wait_for_complete">请等待当前更新完成</string>
+    <string name="carlife_update_no_network">网络没有连接，请检查设置</string>
+    <string name="carlife_update_no_new_version">当前应用已经是最新版本</string>
+    <string name="carlife_update_download_fail">下载失败</string>
+    <string name="carlife_update_cancel">取消</string>
+    <string name="carlife_update_backstage">后台升级</string>
+    <string name="carlife_update_downloading">CarLife 正在下载</string>
+    <string name="carlife_update_go_to_foreground">点击查看详情</string>
+    <string name="carlife_update_download_finish">CarLife 下载完成</string>
+    <string name="carlife_update_click_to_install">点击安装</string>
+    <string name="carlife_update_download_failed_dialog_retry">重新下载</string>
+    <string name="carlife_update_download_failed_dialog_title">下载失败</string>
+    <string name="carlife_update_download_failed_dialog_content">由于网络问题未成功下载</string>
+
+    <!-- Connection abnormal tips -->
+    <string name="carlife_video_permission_hint">请点击手机弹窗内的“立即开始”</string>
+    <string name="carlife_video_permission_denied_hint">如需继续使用，请重新连接并点击弹窗内的“立即开始”</string>
+    <string name="carlife_phone_not_support_hint">非常抱歉，CarLife目前不支持该手机，请期待后续的更新支持，请谅解</string>
+    <string name="carlife_toast_gps_open">请开启GPS导航</string>
+    <string name="carlife_toast_protocol_not_match">非常抱歉，车载系统不支持您手机上的CarLife版本，请升级手机端CarLife版本</string>
+    <string name="carlife_toast_crash">非常抱歉，CarLife出现异常，即将退出！</string>
+    
+    <string name="phone_state_incoming">来电中...</string>
+    <string name="phone_state_calling">呼叫中...</string>
+    <string name="phone_name_unknown">未知</string>
+
+    <string name="control_home">Home</string>
+    <string name="control_phone">Phone</string>
+    <string name="control_map">Map</string>
+    <string name="control_media">Media</string>
+    <string name="control_sub">Sub</string>
+    <string name="control_add">Add</string>
+    <string name="control_clear">Clear</string>
+    <string name="control_delete">Delete</string>
+    <string name="control_back">Back</string>
+    <string name="control_left">Left</string>
+    <string name="control_up">Up</string>
+    <string name="control_ok">OK</string>
+    <string name="control_down">Down</string>
+    <string name="control_right">Right</string>
+    <string name="control_previous">Previous</string>
+    <string name="control_next">Next</string>
+    <string name="control_record_start">开始语音</string>
+    <string name="control_record_stop">停止语音</string>
+    <string name="control_music_start">开始音乐</string>
+    <string name="control_music_stop">停止音乐</string>
+    <string name="control_phone_call">拨接电话</string>
+    <string name="control_phone_end">挂断电话</string>
+    <string name="control_commit">Commit</string>
+    <string name="control_save_spspps">SaveSPSPPS</string>
+    <string name="control_start_call">StartCall</string>
+    <string name="control_answer_call">AnswerCall</string>
+    <string name="control_no_mic">NoMic</string>
+    <string name="control_mobile_mic">MobileMic</string>
+    <string name="control_navi_stop">停止导航</string>
+    <string name="control_car_speed_10">车速10KM</string>
+    <string name="control_car_speed_02">车速2KM</string>
+
+    <string name="auth_tips">为确保连接成功，请允许CarLife的授权请求</string>
+    <string name="auth_tips_img">点击确定</string>
+    <string name="auth_tips_tv_title">允许授权</string>
+
+    <string name="help_android_device">查看如何开启“USB调试”</string>
+    <string name="help_android_check_title">检查数据线并重新连接</string>
+    <string name="help_android_check_content">连接后手机处于充电状态，但无法建立连接，可能是您的USB线仅支持充电，不支持数据传输，您可以换根数据线后尝试重连</string>
+    <string name="help_android_reboot_and_try">尝试重启手机再次连接</string>
+    <string name="help_apple_device">查看如何开启“个人热点”连接车机</string>
+    <string name="help_apple_reboot_and_try">尝试重启手机再次连接</string>
+    <string name="help_main_phone_system">您使用的手机系统</string>
+    <string name="help_main_android_device">安卓手机</string>
+    <string name="help_main_apple_device">苹果手机</string>
+    <string name="help_main_title">连接帮助</string>
+
+    <string name="ncm_tips">为确保连接成功，请允许CarLife的授权请求</string>
+    <string name="ncm_tips_img">点击确定</string>
+
+    <string name="usb_help_tips">在CarLife手机端，沿以下路径操作:</string>
+    <string name="usb_help_tips_img">点击我的</string>
+    <string name="usb_help_tips_img2">点击设置</string>
+    <string name="usb_help_tips_img3">点击前往设置</string>
+    <string name="usb_help_tips2">手机设置中开启“USB调试模式”，操作如下:</string>
+    <string name="usb_help_tips2_img">点击确定</string>
+    <string name="usb_help_tips2_img2">点击开发者选项</string>
+    <string name="usb_help_tips2_img3">开启开发者选项</string>
+    <string name="usb_help_tips2_img4">勾选USB调试</string>
+    <string name="usb_help_tips3">如果手机设置中找不到“开发者选项”，操作如下:</string>
+    <string name="usb_help_tips3_img">点击关于手机</string>
+    <string name="usb_help_tips3_img2">多次点击版本号</string>
+    <string name="usb_help_tips3_img3">返回设置</string>
+
+    <string name="wifi_help_tips2">开启“个人热点”，操作如下:</string>
+    <string name="wifi_help_tips2_img">点击设置</string>
+    <string name="wifi_help_tips2_img2">点击个人热点</string>
+    <string name="wifi_help_tips2_img3">打开个人热点</string>
+    <string name="wifi_help_tips2_img4">成功连接车机</string>
+
+    <string name="progress_bar_rate">正在连接...</string>
+
+    <string name="help_android_aoa_title">安卓手机</string>
+    <string name="help_android_aoa_device">查看如何允许手机上弹出的授权请求</string>
+    <string name="help_android_usb_title">安卓手机</string>
+    <string name="help_apple_title">苹果手机</string>
+    <string name="help_apple_ncm_title">苹果手机</string>
+    <string name="help_apple_ncm_devices">查看如何允许手机上弹出的授权请求</string>
+    <string name="ncm_request_title">允许授权</string>
+    <string name="usb_help_title">开启USB调试</string>
+    <string name="wifi_help_title">开启热点连接</string>
+    <string name="pcm_recorder_error">-启动录音失败，请检查MIC后重试-</string>
+    <string name="pcm_recorder_wrong">-录音出错，请检查MIC后重试-</string>
+    <string name="notification_download_title">CarLife 正在下载</string>
+    <string name="gps_data_tips">请开启GPS导航...</string>
+    <string name="loading_progress_tips">连接中...</string>
+
+</resources>

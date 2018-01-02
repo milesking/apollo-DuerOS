@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>连接帮助</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            font-family: "Heiti SC","Droid Sans","Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+            white-space: nowrap;
+            width: 100%;
+            height: 100%;
+            /*background-color: #132438;*/
+        }
+
+        #content {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #help_back_btn {
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            margin: 33px;
+            background: url('./img/back_default@2x.png') no-repeat;
+            background-position: 0px 0px;
+            background-size: 60px 120px;
+            z-index: 10;
+        }
+
+        #help_back_btn:active {
+            background-position: 0px -60px;
+        }
+
+        #carlife_help_title {
+            position: fixed;
+            width: 100%;
+            height: 123px;
+            overflow: hidden;
+            text-align: center;
+            /*background-color: #132438;*/
+            z-index: 9;
+        }
+
+        #carlife_help_title p{
+            font-size: 30px;
+            padding: 15px 0 0 0;
+        }
+
+        #carlife_help_desc {
+            width: 100%;
+            height: 67.5px;
+            overflow: hidden;
+            text-align: center;
+            /*margin-top: 124.5px;*/
+        }
+
+        #carlife_help_desc p {
+            margin: 0;
+            padding: 0;
+            float: left;
+            margin: 0 0 0 5%;
+            font-size: 24px;
+        }
+
+        #carlife_help_logo_table_box {
+            width: 100%;
+            height: 60%;
+            display: none;
+            text-align: center;
+        }
+
+        #carlife_help_logo_table_box table{
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
+        #carlife_help_logo_table_box td{
+            width: 80%;
+        }
+        .carlife-help-img-box {
+            float: left;
+            width: 100%;
+            text-align: left;
+
+        }
+        .carlife-help-desc-box {
+            float: left;
+            width: 50%;
+        }
+        .carlife-help-desc-box p{
+            float: left;
+            font-size: 22.5px;
+        }
+        .carlife-help-desc-box-left {
+            margin-left: 20%;
+        }
+
+        .carlife-help-desc-box-right {
+            margin-left: 16%;
+        }
+
+        .carlife-help-point-box {
+            background-color: #ffffff;
+            width: 10px;
+            height: 10px;
+            color: #000000;
+            border-radius: 20px;
+            margin: 0 10px 0 0;
+            padding: 2px 8px 2px 8px;
+        }
+
+    </style>
+</head>
+<body onload="initPage()">
+<div id="content">
+    <div id="help_back_btn" ontouchend="carlifeH5Back()"></div>
+    <div id="carlife_help_title"><p>连接帮助</p></div>
+    <div id="scrop_box" style="overflow-y: auto;margin-top: 123px;">
+        <div id="carlife_help_desc"><p>开启“个人热点”连接车机</p></div>
+        <div id="carlife_help_logo_table_box">
+            <table id="carlife_help_logo_table">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="carlife-help-img-box"><img class="carlife-help-img" src="./img/ios_link_details_1.png" alt=""/></div>
+                        <!-- <div class="carlife-help-desc-box">
+                            <p class="carlife-help-desc-box-left"><font class="carlife-help-point-box">1</font>点击设置</p>
+                        </div>
+                        <div class="carlife-help-desc-box">
+                            <p class="carlife-help-desc-box-right"><font class="carlife-help-point-box">2</font>点击个人热点</p>
+                        </div> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="carlife-help-img-box"><img class="carlife-help-img" src="./img/ios_link_details_2.png" alt=""/></div>
+                        <!-- <div class="carlife-help-desc-box">
+                            <p class="carlife-help-desc-box-left"><font class="carlife-help-point-box">3</font>打开个人热点</p>
+                        </div>
+                        <div class="carlife-help-desc-box">
+                            <p class="carlife-help-desc-box-right"><font class="carlife-help-point-box">4</font>成功连接车机</p>
+                        </div> -->
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    function initPage() {
+        var imgs = document.getElementsByClassName("carlife-help-img");
+        var imgsBox = document.getElementsByClassName("carlife-help-img-box");
+        for (var i = imgs.length - 1; i >= 0; i--) {
+            imgs[i].width = (document.body.clientWidth * 0.8);
+            imgs[i].style.marginLeft = (document.body.clientWidth * 0.1 + 'px');
+        }
+        
+        var tmp = document.createElement('div');
+        tmp.innerHTML = '<div class="carlife-help-desc-box"><p class="carlife-help-desc-box-left"><font class="carlife-help-point-box">1</font>点击设置</p></div><div class="carlife-help-desc-box"><p class="carlife-help-desc-box-right"><font class="carlife-help-point-box">2</font>点击个人热点</p></div>';
+        imgsBox[0].appendChild(tmp);
+
+        tmp = document.createElement('div');
+        tmp.innerHTML = '<div class="carlife-help-desc-box"><p class="carlife-help-desc-box-left"><font class="carlife-help-point-box">3</font>打开个人热点</p></div><div class="carlife-help-desc-box"><p class="carlife-help-desc-box-right"><font class="carlife-help-point-box">4</font>成功连接车机</p></div>';
+        imgsBox[1].appendChild(tmp);
+
+        document.getElementById("carlife_help_logo_table_box").style.display = "block";
+        document.getElementById('scrop_box').style.height = ((window.innerHeight - 123) + 'px');
+    }
+    function goTo(type) {
+        if(type === 1) {
+            location.href = './iosHelpDetailsPage.html';
+        }
+        else if(type === 2) {
+            location.href = './androidHelpDetailsPage.html';
+        }
+    }
+
+    function carlifeH5Back() {
+        history.back();
+    }
+
+</script>
+</body>
+</html>

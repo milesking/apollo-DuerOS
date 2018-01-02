@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="288dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/com_dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_carlife_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-8dp"
+        android:gravity="center"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="16dp"
+        android:textColor="@color/cl_text_b_dialog"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/dialog_carlife_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/dialog_carlife_title_bar"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="24dp"/>
+
+    <View
+        android:id="@+id/dialog_carlife_temp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_dialog_line"
+        android:layout_below="@id/dialog_carlife_content"
+        android:background="@color/cl_line_d_dialog" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height"
+        android:layout_below="@id/dialog_carlife_temp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dialog_carlife_first_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/com_bg_dialog_item_selector"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/alert_cancel"
+            android:textColor="@color/cl_text_c_btn_dialog"
+            android:textSize="17sp"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="@dimen/common_dialog_line"
+            android:layout_height="match_parent"
+            android:background="@color/cl_line_d_dialog" />
+
+        <TextView
+            android:id="@+id/dialog_carlife_second_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/com_bg_dialog_item_selector"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/alert_confirm"
+            android:textColor="@color/cl_text_c_btn_dialog"
+            android:textSize="17sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
