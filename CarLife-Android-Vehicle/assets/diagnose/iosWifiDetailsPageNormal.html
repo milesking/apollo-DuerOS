@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>连接帮助</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <style type="text/css">
+        html, body{
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            font-family: "Heiti SC","Droid Sans","Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+            white-space: nowrap;
+            width: 100%;
+            height: 100%;
+            /*background-color: #132438;*/
+        }
+        #content {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        #help_back_btn {
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            margin: 22px;
+
+            background: url('./img/back_default@2x.png') no-repeat;
+            background-position: 0px 0px;
+            background-size: 40px 80px;
+        }
+
+        #help_back_btn:active {
+            background-position: 0px -40px;
+        }
+
+        #carlife_help_title {
+            width: 100%;
+            height: 72px;
+            overflow: hidden;
+            text-align: center;
+            margin: 10px 0 0 0;
+            font-size: 20px;
+        }
+
+        #carlife_help_desc_title {
+            width: 80%;
+            overflow: hidden;
+            margin: 0 auto;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: -10px;
+            padding-bottom: 15px;
+        }
+        #carlife_help_desc_title .carlife-help-desc-title-left{
+            width: 50%;
+            float: left;
+            font-size: 20px;
+        }
+        #carlife_help_desc_title .carlife-help-desc-title-right{
+            width: 50%;
+            float: left;
+        }
+        #carlife_help_desc_title p {
+            margin: 7px 0 0 0;
+        }
+
+
+        #link_type_parent {
+            height: 32px;
+            width: 96px;
+            float: right;
+        }
+        #link_type_parent p{
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 8px;
+        }
+
+        #link_type_usb,
+        #link_type_wifi {
+            float: left;
+            width: 50%;
+            height: 100%;
+            background: url('./img/link_type_bg.png') no-repeat;
+            background-size: 48px 128px;
+            text-align: center;
+        }
+
+        #link_type_usb {
+            background-position: 0px -64px;
+        }
+
+        #link_type_wifi {
+            background-position: 0px -96px;
+        }
+
+        #carlife_help_desc {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.5);
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #cont {
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .li-div {
+            overflow: hidden;
+            width: 100%;
+        }
+        .li-div .li-div-left {
+            float: left;
+            height: 30px;
+        }
+        .li-div .li-div-right {
+            float: left;
+        }
+        .li-content {
+            line-height: 30px;
+            white-space: normal;
+        }
+
+
+        .circle-icon {
+            margin: 11px 16px 0 0;
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            /*vertical-align: middle;*/
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        #carlife_help_desc_foot {
+            width: 80%;
+            margin: 15px auto;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            height: 40px;
+            text-align: center;
+        }
+
+        #carlife_help_desc_foot p{
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+    </style>
+</head>
+<body onload="initPage()">
+<div id="content">
+    <div id="help_back_btn" ontouchend="carlifeH5Back()"></div>
+    <div id="carlife_help_title"><p>连接方式</p></div>
+
+    <div id="carlife_help_desc_box">
+        <div id="carlife_help_desc_title">
+            <div class="carlife-help-desc-title-left">
+                <p>更改默认连接方式</p>
+            </div>
+            <div class="carlife-help-desc-title-right">
+                <div id="link_type_parent">
+                    <div id="link_type_usb" value="4" selected="0"><p>USB</p></div>
+                    <div id="link_type_wifi" value="5" selected="0"><p>WIFI</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="carlife_help_desc">
+            <div id="cont">
+                <div class="li-div">
+                    <div class="li-div-left">
+                        <span class="circle-icon"></span>
+                    </div>
+                    <div class="li-div-right">
+                        <span class="li-content">如果多次连接失败，请先尝试切换连接方式，如需支持请查看连接帮助</span>
+                    </div>
+                </div>
+                <div class="li-div">
+                    <div class="li-div-left">
+                        <span class="circle-icon"></span>
+                    </div>
+                    <div class="li-div-right">
+                        <span class="li-content">切换后立即生效</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="carlife_help_desc_foot">
+            <p>如使用WIFI连接，需打开车机WIFI，同时开启手机热点，首次需手动连接。</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function initPage() {
+        location.href = 'bdcarlife://check?moduleName=connectType&actionParam=&callback=setConnectType';
+        var windowHeight = document.body.clientHeight;
+        var windowWidth = document.body.clientWidth;
+        var liDivRightList = document.getElementsByClassName('li-div-right');
+        var carlifeHelpDescBox = document.getElementById('carlife_help_desc_box');
+        for(var i = (liDivRightList.length - 1); i >= 0; i--) {
+            liDivRightList[i].style.width = ((windowWidth * 0.8 - 23) + 'px');
+        }
+        carlifeHelpDescBox.style.marginTop = (((windowHeight - 82 - carlifeHelpDescBox.offsetHeight) / 3) + 'px');
+        document.getElementById('link_type_usb').ontouchend = changeConnectType;
+        document.getElementById('link_type_wifi').ontouchend = changeConnectType;
+
+    }
+    function setConnectType(connectType) {
+        var wifiobj = document.getElementById('link_type_wifi');
+        var usbobj = document.getElementById('link_type_usb');
+        //为了减少图片切分故采用比较冗余的编码方式
+        if(connectType === 5) {
+            wifiobj.style.backgroundPosition = '0px 0px';
+            wifiobj.setAttribute('selected', '1');
+            wifiobj.getElementsByTagName('p')[0].style.color = '#ffffff';
+
+            usbobj.style.backgroundPosition = '0px -64px';
+            usbobj.setAttribute('selected', '0');
+            usbobj.getElementsByTagName('p')[0].style.color = 'rgba(255, 255, 255, 0.5)';
+        } else if (connectType === 4) {
+            usbobj.style.backgroundPosition = '0px -32px';
+            usbobj.setAttribute('selected', '1');
+            usbobj.getElementsByTagName('p')[0].style.color = '#ffffff';
+
+            wifiobj.style.backgroundPosition = '0px -96px';
+            wifiobj.setAttribute('selected', '0');
+            wifiobj.getElementsByTagName('p')[0].style.color = 'rgba(255, 255, 255, 0.5)';
+        }
+        
+    }
+    function changeConnectType(e) {
+        e.preventDefault();
+        var aimstatus = parseInt(this.getAttribute('value'), 10);
+        var selectStatus = parseInt(this.getAttribute('selected'), 10);
+        if(selectStatus === 0) {
+            window.open('bdcarlife://change?moduleName=connectType&aimStatus='+ aimstatus +'&callback=');
+            setConnectType(aimstatus);
+        }
+    }
+    function carlifeH5Back() {
+        history.back();
+    }
+</script>
+</body>
+</html>

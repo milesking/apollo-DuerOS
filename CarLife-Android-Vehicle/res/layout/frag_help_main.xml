@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_bg_c_main">
+
+    <include
+        android:id="@+id/common_title_bar"
+        layout="@layout/carlife_common_title_bar_new" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/common_title_bar"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp"
+            android:paddingLeft="108dp"
+            android:paddingRight="24dp"
+            android:paddingTop="24dp"
+            android:text="@string/help_main_phone_system"
+            android:textColor="@color/cl_text_a2_content"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="84dp"
+                android:layout_height="96dp" />
+
+            <LinearLayout
+                android:id="@+id/goto_android_layout"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_weight="1"
+                android:background="@drawable/com_bg_item_selector"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/android_device"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="24dp"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="24dp"
+                        android:paddingTop="24dp"
+                        android:text="@string/help_main_android_device"
+                        android:textColor="@color/cl_text_a5_content"
+                        android:textSize="30sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="39dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="24dp"
+                        android:src="@drawable/car_ic_more01" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@color/cl_line_a1_item" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="84dp"
+                android:layout_height="96dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="84dp"
+                android:layout_height="96dp" />
+
+            <LinearLayout
+                android:id="@+id/goto_apple_layout"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_weight="1"
+                android:background="@drawable/com_bg_item_selector"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/apple_device"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="24dp"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="24dp"
+                        android:paddingTop="24dp"
+                        android:text="@string/help_main_apple_device"
+                        android:textColor="@color/cl_text_a5_content"
+                        android:textSize="30sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="39dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="24dp"
+                        android:src="@drawable/car_ic_more01" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@color/cl_line_a1_item" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="84dp"
+                android:layout_height="96dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+
+	<!-- main -START -->
+    <string name="app_name">Baidu CarLife</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="alert_quit">Exit</string>
+    <string name="alert_quit_app_content">Do you want to exit CarLife?</string>
+    <string name="alert_notification">Tips</string>
+    <string name="alert_confirm">OK</string>
+    <string name="alert_cancel">Cancel</string>
+    <string name="baidu_logo">\@ 2014 Baidu</string>
+    <!-- main -END -->
+
+    <!-- connect -START -->
+    <string name="usb_connecting">Connecting...</string>
+    <string name="usb_connecting_hold_auto">Please use USB or WiFi to make a connection.</string>
+    <string name="usb_connecting_hold_unauto">Please use USB or WiFi to make a connection.</string>
+    <string name="usb_connected_hold">Connection Successful</string>
+    <string name="usb_connect_fail">Connection error, please reconnect.</string>
+    <string name="usb_connect_fail_install">Connection error, please reconnect.</string>
+    <string name="usb_connect_fail_start">Connection error, Please restart CarLife on mobile device.</string>
+    <string name="usb_connect_fail_not_surpport">Your current mobile Andorid version is too low.</string>
+    <string name="usb_connect_fail_start_bdsc">Connection error, please reboot your mobile device.</string>
+    <string name="usb_connect_fail_timeout">Connection timeout, please reconnect.</string>
+    
+    <string name="usb_connect_btn_retry">Reconnect</string>
+    <string name="usb_connect_btn_retry_info">Advices</string>
+    
+    <string name="usb_cable_connected">USB Connected</string>
+    <string name="usb_cable_disconnected">USB Not Connected</string>
+    
+    <string name="usb_statusbar_title">Connection Status</string>
+    <string name="usb_statusbar_disconnected">CarLife Not Connected</string>
+    <string name="usb_statusbar_connecting">Connecting...</string>
+    <string name="usb_statusbar_connected">Connection Successful</string>
+    
+    <string name="connect_screenoff_hint">Please keep unlock your Phone</string>
+    <string name="connect_background_hint">Please reamin in CarLife</string>
+    <string name="connect_exit_carlife">Exit CarLife</string>
+    <string name="connect_start_carlife">Launch CarLife</string>
+    <string name="connect_progress_number">%1$d%2$c</string>
+    
+    <string name="check_update">Checking for update...</string>
+    <string name="download_carlife">Downloading the latest CarLife...</string>
+    <string name="connect_diagnose_title">Advices</string>
+    <!-- connect -END -->
+
+    <!-- set -START -->
+    <string name="module_setting">Help</string>
+    <string-array name="carlife_setting_name">
+        <item>Settings</item>
+        <item>Help</item>
+        <item>About</item>
+    </string-array>
+
+    <string name="module_custom_usb_ConnectType">USB Connection </string>
+    <string name="module_custom_wifi_ConnectType">WiFi Connection</string>
+    <string name="module_custom_wifi_default_ip">192.168.43.1</string>
+    <!-- set -END -->
+    
+    <!-- update -->
+	<string name="carlife_update_tips_dialog_confirm">Update Now</string>
+	<string name="carlife_update_tips_dialog_cancel">Later</string>
+	<string name="carlife_update_tips_dialog_title">Update Info</string>
+    <string name="carlife_update_wait_for_complete">Please wait for update completion</string>
+	<string name="carlife_update_no_network">No internet connection, please check settings</string>
+	<string name="carlife_update_no_new_version">Current software is up to date</string>
+	<string name="carlife_update_download_fail">Download Failed</string>
+	<string name="carlife_update_cancel">Cancel</string>
+	<string name="carlife_update_backstage">Background</string>
+	<string name="carlife_update_downloading">Downloading...</string>
+	<string name="carlife_update_go_to_foreground">Click for more details</string>
+	<string name="carlife_update_download_finish">Downloaded</string>
+	<string name="carlife_update_click_to_install">Install</string>
+    <string name="carlife_update_download_failed_dialog_retry">Redownload</string>
+	<string name="carlife_update_download_failed_dialog_title">Download Failed</string>
+	<string name="carlife_update_download_failed_dialog_content">Download failed due to network error</string>
+	
+</resources>

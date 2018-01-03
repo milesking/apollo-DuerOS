@@ -1,0 +1,62 @@
+#Channel Id: Baidu will provide the channel id to all OEM
+20022100
+
+# Audio Track Type 0:普通双音轨(路畅、华阳、飞哥) 1:单音轨(掌讯,仅用于测试) 2:定制双音轨-1(BYD、远峰) 3:定制双音轨-2（长安） 4：百度定制双音轨
+AUDIO_TRACK_TYPE = 0
+
+# How many audio tracks Carlife Vehicle will apply for Music and TTS playback
+AUDIO_TRACK_NUM = 2
+
+# Audio track stream type for TTS channel
+AUDIO_TRACK_STREAM_TYPE = 3
+
+# Whether or not require audio focus when playing back TTS 
+AUDIO_TTS_REQUEST_FOCUS = true
+
+# 是否使用车机端MiC 0:使用车机端mic，1:使用手机端mic，2:不支持
+VOICE_MIC = 0
+
+# 是否支持唤醒
+VOICE_WAKEUP = true
+
+# 车机解码是否容易发生丢帧，打开后input2Decoder等待时间改为1000ms
+NEED_MORE_DECODE_TIME = false
+
+# 是否支持Carlife内置蓝牙电话
+BLUETOOTH_INTERNAL_UI = false
+
+# 是否使用透传方式
+TRANSPARENT_SEND_TOUCH_EVENT = true
+
+# 是否在每个触摸事件之前发送Action_Down
+#SEND_ACTION_DOWN = false
+
+# 是否使用车机端GPS
+VEHICLE_GPS = false
+
+# Focus Ui
+FOCUS_UI = false
+
+# 音频采样率 0:跟随手机系统 1:48k
+MEDIA_SAMPLE_RATE = 0
+
+# Android手机的连接类型  1:AOA
+CONNECT_TYPE_ANDROID = 1
+
+# Iphone手机的连接类型 1:Wifi 2:保留 4:EAP  5:UsbMuxd
+CONNECT_TYPE_IPHONE = 4
+
+#Next song
+#KEYCODE_SEEK_ADD = 23
+
+#Previous song
+#KEYCODE_SEEK_SUB = 22
+
+#定制MD向HU传输音频流方式 0：专用独立通道传输 1：蓝牙
+AUDIO_TRANSMISSION_MODE=0
+
+#数据内容加密开关 true：数据传输加密 false：数据传输不加密
+CONTENT_ENCRYPTION=true
+
+#车机动力类型 汽油车：0 电动车：1
+ENGINE_TYPE=0

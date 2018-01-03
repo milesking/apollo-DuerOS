@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv:refresh content:1;URL="bdcarlife://check?objName=vehicleType&actionParam=&callback=setVehicleType(vehicleTpye)"> -->
+    <title>连接帮助</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            font-family: "Heiti SC","Droid Sans","Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+            white-space: nowrap;
+            width: 100%;
+            height: 100%;
+            /*background-color: #132438;*/
+        }
+
+        #content {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #help_back_btn {
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            margin: 22px;
+
+            background: url('./img/back_default@2x.png') no-repeat;
+            background-position: 0px 0px;
+            background-size: 40px 80px;
+        }
+
+        #help_back_btn:active {
+            background-position: 0px -40px;
+        }
+
+        #carlife_help_title {
+            width: 100%;
+            height: 72px;
+            overflow: hidden;
+            text-align: center;
+            margin: 10px 0 0 0;
+            font-size: 20px;
+        }
+
+        #carlife_help_logo_table_box {
+            width: 100%;
+            text-align: center;
+            display: none;
+        }
+
+        #carlife_help_logo_table_box_usb {
+            width: 100%;
+            text-align: center;
+            display: none;
+        }
+
+        #carlife_help_logo_table {
+            width: 100%;
+        }
+
+        #carlife_help_logo_table td{
+            width: 33.3%;
+        }
+
+        #carlife_help_logo_table_usb {
+            width: 100%;
+        }
+
+        #carlife_help_logo_table_usb td{
+            width: 33.3%;
+        }
+
+        .carlife-help-img-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .carlife-help-img-box img{
+            width: 110px;
+        }
+
+        .carlife-help-solution-label {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 15px;
+        }
+
+        #ios_link {
+            width: 110px;
+            height: 110px;
+            background: url('./img/ios_link.png') no-repeat;
+            background-position: 0px 0px;
+            background-size: 110px 220px;
+            margin: 0 auto;
+        }
+
+        #ios_link:active {
+            background-position: 0px -110px;
+        }
+
+        #wifi_link {
+            width: 110px;
+            height: 110px;
+            background: url('./img/wifi_link.png') no-repeat;
+            background-position: 0px 0px;
+            background-size: 110px 220px;
+            margin: 0 auto;
+        }
+
+        #wifi_link:active {
+            background-position: 0px -110px;
+        }
+
+    </style>
+</head>
+<body onload="initPage()">
+    <div id="content">
+        <div id="help_back_btn" ontouchend="carlifeH5Back()"></div>
+        <div id="carlife_help_title"><p>连接帮助</p></div>
+        <div id="carlife_help_logo_table_box">
+            <table id="carlife_help_logo_table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="carlife-help-img-box">
+                                <div id="ios_link" ontouchend="goTo(1)"></div>
+                            </div>
+                            <p class="carlife-help-solution-label">方法一&nbsp;&nbsp;<font ontouchend="goTo(1)" style="border: 1px solid rgba(255, 255, 255, 0.5);padding: 3px 10px 3px 10px">详情</font></p>
+                            <p>开启“个人热点”连接</p>
+                        </td>
+                        <td>
+                            <div class="carlife-help-img-box">
+                                <img src="./img/restart.png" alt=""/>
+                            </div>
+                            <p class="carlife-help-solution-label">方法二</p>
+                            <p>重启手机再次连接</p>
+                        </td>
+                        <td>
+                            <div class="carlife-help-img-box">
+                                <div id="wifi_link" ontouchend="goTo(3)"></div>
+                            </div>
+                            <p class="carlife-help-solution-label">方法三&nbsp;&nbsp;<font ontouchend="goTo(3)" style="border: 1px solid rgba(255, 255, 255, 0.5);padding: 3px 10px 3px 10px">详情</font></p>
+                            <p>当前连接方式</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="carlife_help_logo_table_box_usb">
+            <table id="carlife_help_logo_table_usb">
+                <tbody>
+                    <tr>
+                        <!-- <td>
+                            <div class="carlife-help-img-box">
+                                <div id="android_start_usb" ontouchend="goTo(2)"></div>
+                            </div>
+                            <p class="carlife-help-solution-label">方法一&nbsp;&nbsp;<font  ontouchend="goTo(2)" style="border: 1px solid rgba(255, 255, 255, 0.5);padding: 3px 10px 3px 10px">详情</font></p>
+                            <p>开启“USB调试”</p>
+                        </td> -->
+                        <td>
+                            <div class="carlife-help-img-box"><img src="./img/android_restart_usb.png" alt=""></div>
+                            <p class="carlife-help-solution-label">方法一</p>
+                            <p>重新连接USB</p>
+                        </td>
+                        <td>
+                            <div class="carlife-help-img-box"><img src="./img/restart.png" alt=""></div>
+                            <p class="carlife-help-solution-label">方法二</p>
+                            <p>重启手机再次连接</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+
+
+    function initPage() {
+        location.href = ("bdcarlife://check?moduleName=vehicleType&actionParam=&callback=setVehicleType");
+        var windowHeight = document.body.clientHeight;
+        var picTable = document.getElementById("carlife_help_logo_table");
+        picTable.style.marginTop = ((windowHeight - 290) / 2) + "px";
+        document.getElementById("carlife_help_logo_table_usb").style.marginTop = ((windowHeight - 290) / 2) + "px";
+//        document.getElementById("carlife_help_logo_table_box").style.display = "block";
+    }
+
+    function setVehicleType(vehicleTpye) {
+        if (vehicleTpye == 0) {
+            document.getElementById('carlife_help_logo_table_box_usb').style.display = 'block';
+        }
+        else if(vehicleTpye == 1) {
+            document.getElementsByTagName("td")[2].style.display = "none";
+            document.getElementById('carlife_help_logo_table_box').style.display = 'block';
+        }
+        else if (vehicleTpye == 2) {
+            document.getElementById('carlife_help_logo_table_box').style.display = 'block';
+        }
+    }
+
+    function goTo(type) {
+        if(type === 1) {
+            location.href = './iosHelpDetailsPageNormal.html';
+        }
+        else if(type === 2) {
+            location.href = './androidHelpDetailsPageNormal.html';
+        }
+        else if(type === 3) {
+            location.href = './iosWifiDetailsPageNormal.html';
+        }
+    }
+
+    function carlifeH5Back() {
+        history.back();
+    }
+
+</script>
+</body>
+</html>

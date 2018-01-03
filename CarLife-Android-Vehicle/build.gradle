@@ -1,0 +1,62 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.android.application'
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.1'
+    }
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.3"
+
+    signingConfigs {
+        debug {
+            storeFile file("debug.keystore")
+        }
+        release {
+            storeFile file("carlife.keystore")
+            keyAlias 'carlife.keystore'
+            keyPassword 'm5ZRYQe4yrpm6jdx'
+            storePassword 'm5ZRYQe4yrpm6jdx'
+        }
+    }
+
+    buildTypes {
+        release {
+            proguardFile 'proguard.cfg'
+            signingConfig signingConfigs.release
+        }
+        debug {
+
+        }
+    }
+
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+
+    defaultConfig {
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], exclude: ['android-support-v4.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:22.2.0'
+}

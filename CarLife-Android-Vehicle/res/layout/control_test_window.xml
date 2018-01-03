@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#AA1B324D"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/control_btn_home"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_home" />
+
+        <Button
+            android:id="@+id/control_btn_phone"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_phone" />
+
+        <Button
+            android:id="@+id/control_btn_map"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_map" />
+
+        <Button
+            android:id="@+id/control_btn_media"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_media" />
+
+        <ImageButton
+            android:id="@+id/exit_img_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/com_exitapp_btn_selector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/control_btn_seek_sub"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_sub" />
+
+        <Button
+            android:id="@+id/control_btn_seek_add"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_add" />
+
+        <Button
+            android:id="@+id/control_btn_clear"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_clear" />
+
+        <Button
+            android:id="@+id/control_btn_delete"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_delete" />
+
+        <Button
+            android:id="@+id/control_btn_back"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_back" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/control_btn_left"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_left" />
+
+        <Button
+            android:id="@+id/control_btn_up"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_above="@id/control_btn_left"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/control_btn_left"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_up" />
+
+        <Button
+            android:id="@+id/control_btn_ok"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/control_btn_left"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_ok" />
+
+        <Button
+            android:id="@+id/control_btn_down"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/control_btn_ok"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/control_btn_left"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_down" />
+
+        <Button
+            android:id="@+id/control_btn_right"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/control_btn_ok"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_right" />
+
+        <Button
+            android:id="@+id/control_btn_selector_previous"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/control_btn_right"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_previous" />
+
+        <Button
+            android:id="@+id/control_btn_selector_next"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/control_btn_selector_previous"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_next" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/control_record_start"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_record_start" />
+
+        <Button
+            android:id="@+id/control_record_stop"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_record_stop" />
+
+        <Button
+            android:id="@+id/control_music_start"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_music_start" />
+
+        <Button
+            android:id="@+id/control_music_stop"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_music_stop" />
+
+        <Button
+            android:id="@+id/control_phone_call"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_phone_call" />
+
+        <Button
+            android:id="@+id/control_phone_end"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_phone_end" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/control_video_test_et"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:textColor="#ffff00"
+            android:textSize="16sp">
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/control_video_test_btn1"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_commit" />
+
+        <Button
+            android:id="@+id/control_video_test_btn2"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_save_spspps" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_start_call" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_answer_call" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/control_btn_not_support_mic"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_no_mic" />
+
+        <Button
+            android:id="@+id/control_btn_use_mobile_mic"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_mobile_mic" />
+
+        <Button
+            android:id="@+id/control_navi_stop"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_navi_stop" />
+
+        <Button
+            android:id="@+id/control_car_speed_10"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_car_speed_10" />
+
+        <Button
+            android:id="@+id/control_car_speed_02"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/com_main_fragment_btn_retry_selector"
+            android:text="@string/control_car_speed_02" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

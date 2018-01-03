@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>连接帮助</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            font-family: "Heiti SC","Droid Sans","Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+            white-space: nowrap;
+            width: 100%;
+            height: 100%;
+            /*background-color: #132438;*/
+        }
+
+        #content {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #help_back_btn {
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            margin: 22px;
+            background: url('./img/back_default@2x.png') no-repeat;
+            background-position: 0px 0px;
+            background-size: 40px 80px;
+        }
+
+        #help_back_btn:active {
+            background-position: 0px -40px;
+        }
+
+        #carlife_help_title {
+            width: 100%;
+            height: 72px;
+            overflow: hidden;
+            text-align: center;
+            margin: 10px 0 0 0;
+            font-size: 20px;
+        }
+
+        #carlife_help_desc {
+            width: 100%;
+            height: 30px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        #carlife_help_desc p {
+            margin: 0;
+            padding: 0;
+            opacity: 0.5;
+            font-size: 15px;
+        }
+
+        #carlife_help_logo_table_box {
+            width: 100%;
+            text-align: center;
+            display: none;
+        }
+
+        #carlife_help_logo_table {
+            width: 100%;
+        }
+
+        .carlife-help-img-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        #logo_apple {
+            width: 110px;
+            height: 110px;
+            background: url('./img/logo_apple.png') no-repeat;
+            background-position: 0px 0px;
+            background-size: 110px 220px;
+            margin: 0 auto;
+        }
+
+        #logo_apple:active {
+            background-position: 0px -110px;
+        }
+
+        #logo_android {
+            width: 110px;
+            height: 110px;
+            background: url('./img/logo_android.png') no-repeat;
+            background-position: 0px 0px;
+            background-size: 110px 220px;
+            margin: 0 auto;
+        }
+
+        #logo_android:active {
+            background-position: 0px -110px;
+        }
+    </style>
+</head>
+
+<body onload="initPage()">
+
+    <div id="content">
+        <div id="help_back_btn" ontouchend="carlifeH5Back()"></div>
+        <div id="carlife_help_title"><p>连接帮助</p></div>
+        <div id="carlife_help_desc"><p>请选择您使用的手机</p></div>
+        <div id="carlife_help_logo_table_box">
+            <table id="carlife_help_logo_table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="carlife-help-img-box">
+                                <div id="logo_apple" ontouchend="goTo(1)"></div>
+                            </div>
+                            <p>苹果手机</p>
+                        </td>
+                        <td>
+                            <div class="carlife-help-img-box">
+                                <div id="logo_android" ontouchend="goTo(2)"></div>
+                            </div>
+                            <p>安卓手机</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+
+    function initPage() {
+        var windowHeight = document.body.clientHeight;
+        var picTable = document.getElementById("carlife_help_logo_table");
+        picTable.style.marginTop = ((windowHeight - 290) / 2) + "px";
+        document.getElementById("carlife_help_logo_table_box").style.display = "block";
+    }
+
+    function goTo(type) {
+        if(type === 1) {
+            location.href = './iosHelpPageNormal.html';
+        }
+        else if(type === 2) {
+            location.href = './androidHelpPageNormal.html';
+        }
+    }
+
+    function checkPhoneType() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var isIphone = sUserAgent.match(/iphone/i) == 'iphone';
+        var isAndroid = sUserAgent.match(/android/i) == 'android';
+        if(isIphone) {
+            return 1;
+        }
+        else if(isAndroid) {
+            return 2;
+        }
+    }
+
+    function carlifeH5Back() {
+        if(checkPhoneType() === 2) {
+            window.open('bdcarlife://close?moduleName=currPage');
+        }
+    }
+
+</script>
+
+</body>
+</html>

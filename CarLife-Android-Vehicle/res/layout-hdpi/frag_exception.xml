@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_bg_c_main"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="432dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/exception_display_img_view"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:layout_marginTop="70dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/car_ic_click" />
+
+        <TextView
+            android:id="@+id/exception_display_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/exception_display_img_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/connect_screenoff_hint"
+            android:textColor="@color/cp_cont_d"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/exception_start_app_btn"
+            android:layout_width="136dp"
+            android:layout_height="44dp"
+            android:layout_below="@id/exception_display_text_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/selector_btn_retry"
+            android:text="@string/connect_start_carlife"
+            android:textColor="@color/cl_text_a4_bgtext"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

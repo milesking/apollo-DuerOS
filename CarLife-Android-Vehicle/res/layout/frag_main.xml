@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_bg_c_main">
+
+    <RelativeLayout
+        android:id="@+id/rellayout_bar"
+        android:layout_width="match_parent"
+        android:layout_height="104dp">
+
+        <ImageButton
+            android:id="@+id/exit_img_btn"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/com_bg_btn_selector"
+            android:scaleType="center"
+            android:src="@drawable/car_ic_exit" />
+
+        <TextView
+            android:id="@+id/main_btn_help"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/com_bg_btn_selector"
+            android:gravity="center"
+            android:scaleType="center"
+            android:text="@string/baidu_help"
+            android:textColor="@color/cl_text_a4_title"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_rellayout_status"
+        android:layout_width="648dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/main_img_view"
+            android:layout_width="match_parent"
+            android:layout_height="216dp"
+            android:layout_marginTop="105dp"
+            android:src="@drawable/car_ic_usbwifi" />
+
+        <TextView
+            android:id="@+id/main_info_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_img_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="@string/usb_not_connected"
+            android:textColor="@color/cp_cont_d"
+            android:textSize="27sp" />
+
+        <Button
+            android:id="@+id/main_retry_btn"
+            android:layout_width="204dp"
+            android:layout_height="66dp"
+            android:layout_below="@id/main_info_text_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/selector_btn_retry"
+            android:text="@string/usb_connect_btn_retry"
+            android:textColor="@color/cl_text_a4_bgtext"
+            android:textSize="24dp"
+            android:visibility="invisible"></Button>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
+
+    <com.baidu.carlifevehicle.view.LoadingProgressBar
+        android:id="@+id/main_load_round_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
