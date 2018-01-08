@@ -38,7 +38,8 @@
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
     <application android:label="@string/app_name"
-                 android:supportsRtl="true">
+                 android:supportsRtl="true"
+                 android:allowBackup="false">
         <meta-data android:name="com.baidu.lbsapi.API_KEY"
                    android:value="LErpRk6wnl42u141cxuLhN0f3EZabGUk"/>
         <service android:name="com.baidu.location.f" android:enabled="true"
