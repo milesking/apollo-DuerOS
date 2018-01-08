@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+    <LinearLayout
+            android:id="@+id/main_layout_status_bar"
+            android:layout_width="@dimen/status_bar_width"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/main_screen_margin"
+            android:gravity="center_horizontal">
+        <ImageView
+                android:id="@+id/main_imgv_network"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_net_none"/>
+        <ImageView
+                android:id="@+id/main_imgv_bluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bt_off"
+                android:layout_marginTop="@dimen/status_bar_icon_margin"/>
+        <ImageView
+                android:id="@+id/main_imgv_gps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_gps_3"
+                android:layout_marginTop="@dimen/status_bar_icon_margin"/>
+    </LinearLayout>
+
+    <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/main_layout_status_bar"
+            android:layout_marginTop="@dimen/default_32"
+            android:layout_marginBottom="@dimen/default_32"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/default_48">
+            <fragment
+                    android:id="@+id/main_item_info"
+                    android:layout_width="@dimen/main_item_width"
+                    android:layout_height="match_parent"
+                    android:name="com.baidu.che.codriverlauncher.home.InfoFragment"/>
+
+            <FrameLayout
+                    android:id="@+id/main_item_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_32"
+                    android:foreground="@drawable/button_bg_selector">
+
+                <RelativeLayout
+                        android:layout_width="@dimen/main_item_width"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/home_item_bg">
+
+                    <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/default_201"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/home_item_ic_map"/>
+
+                    <TextView
+                            android:id="@+id/main_item_map_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:textSize="@dimen/default_text_14"
+                            android:textColor="@color/white"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/main_item_label_margin_bottom"
+                            android:alpha="0.6"
+                            android:text="@string/baidu_map_for_car"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:textSize="@dimen/default_text_22"
+                            android:textColor="@color/white"
+                            android:layout_above="@id/main_item_map_label"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/main_item_title_margin_bottom"
+                            android:text="@string/map_auto"/>
+
+                </RelativeLayout>
+            </FrameLayout>
+
+            <fragment
+                    android:id="@+id/main_fragment_feed"
+                    android:layout_width="@dimen/main_item_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/main_item_margin"
+                    android:name="com.baidu.che.codriverlauncher.home.FeedFragment"/>
+
+
+            <include
+                    android:id="@+id/main_item_recorder"
+                    android:layout_width="@dimen/main_item_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/main_item_margin"
+                    layout="@layout/fragment_recorder"/>
+
+
+            <FrameLayout
+                    android:id="@+id/main_item_personnal_center"
+                    android:layout_width="@dimen/main_item_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/main_item_margin"
+                    android:foreground="@drawable/button_bg_selector">
+                <TextView
+                        style="@style/MainItemText"
+                        android:drawableTop="@drawable/home_more_ic_account"
+                        android:text="@string/my"/>
+            </FrameLayout>
+
+            <FrameLayout
+                    android:id="@+id/main_item_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/main_item_margin"
+                    android:foreground="@drawable/button_bg_selector">
+                <TextView
+                        style="@style/MainItemText"
+                        android:drawableTop="@drawable/home_more_ic_btcall"
+                        android:text="@string/telephone"/>
+            </FrameLayout>
+
+            <FrameLayout
+                    android:id="@+id/main_item_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/main_item_margin"
+                    android:foreground="@drawable/button_bg_selector">
+
+                <TextView
+                        style="@style/MainItemText"
+                        android:drawableTop="@drawable/home_more_ic_carsetting"
+                        android:text="@string/settings"/>
+            </FrameLayout>
+
+            <FrameLayout
+                    android:id="@+id/main_item_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/main_item_margin"
+                    android:foreground="@drawable/button_bg_selector">
+                <TextView
+                        style="@style/MainItemText"
+                        android:drawableTop="@drawable/home_more_ic_application"
+                        android:text="@string/more"/>
+            </FrameLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+            android:id="@+id/main_imgv_voice"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_voice"
+            android:background="@drawable/button_bg_circle_selector"/>
+
+</RelativeLayout>

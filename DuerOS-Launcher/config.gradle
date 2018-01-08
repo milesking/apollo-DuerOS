@@ -1,0 +1,112 @@
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+import java.util.regex.Pattern
+
+project.ext {
+
+    javaVersion = 7
+    javaMaxHeapSize = '2G'
+    compileSdkVersion = 22
+    buildToolsVersion = "25.0.0"
+
+    minSdkVer = 16
+    targetSdkVer = 22
+
+    enableBuildNative = true
+    enableAspectj = false
+    installAfterBuild = false
+
+    // 开启instantRun
+    instantRun = false
+    // 自定义 multiDex
+    customMultiDex = true
+
+    // resguard
+    enableResguard = true
+
+    sourceCompatibility = this.&getJavaVersion()
+    targetCompatibility = this.&getJavaVersion()
+    getParamManifest = this.&getParamManifest
+    parseLocalPropertes = this.&parseLocalPropertes
+    analysisDexMethod = this.&analysisDexMethod
+    generateMainDexClass = this.&generateMainDexClass
+    analysisPath = this.&analysisPath
+    androidJarPath = this.&getAndroidJarPath()
+    releaseTime = this.&releaseTime
+
+    buildToolsPath = "${project.rootDir}/build-tools/"
+    multiDexRulesDir = "${projectDir}/multidex"
+}
+
+def getJavaVersion() {
+    switch (project.ext.javaVersion) {
+        case "6":
+            return JavaVersion.VERSION_1_6
+        case "7":
+            return JavaVersion.VERSION_1_7
+        case "8":
+            return JavaVersion.VERSION_1_8
+        case "9":
+            return JavaVersion.VERSION_1_9
+        default:
+            return JavaVersion.VERSION_1_6
+    }
+}
+
+def getAndroidJarPath() {
+    def androidJarPath = "${System.env.ANDROID_HOME}" + "/platforms/android-" + project.ext.compileSdkVersion + "/android.jar"
+    if (!isFileExists(androidJarPath)) {
+        def sdkDir = project.android.getSdkDirectory().getPath()
+        if (sdkDir == null || !isFileExists(sdkDir + "/platforms/android-" + project.ext.compileSdkVersion + "/android.jar")) {
+            throw new RuntimeException("ANDROID_HOME环境变量或者sdk.dir属性不存在，请配置环境遍历在local.preperties中设置")
+        }
+        androidJarPath = sdkDir + "/platforms/android-" + project.ext.compileSdkVersion + "/android.jar"
+    }
+    return androidJarPath
+}
+
+def isFileExists(path) {
+    def mFile = new File(path)
+    return mFile.exists()
+}
+
+def parseLocalProperties(param) {
+    def localProperties = new File(project.rootDir, "local.properties")
+    if (localProperties.exists()) {
+        Properties properties = new Properties()
+        localProperties.withInputStream { instr ->
+            properties.load(instr)
+        }
+        return properties.getProperty("$param")
+    }
+    return null
+}
+
+def analysisPath(param) {
+    param = "${param}".toLowerCase()
+    def path
+    android.applicationVariants.all { variant ->
+        def variantName = variant.name.toLowerCase()
+        if (param.contains(variantName)) {
+            path = variant.dirName
+        }
+    }
+    return path
+}
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd_HH-mm-ss");
+}

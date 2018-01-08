@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:foreground="@drawable/button_bg_selector">
+
+    <RelativeLayout
+            android:layout_width="@dimen/main_item_width"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_item_bg">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_201"
+                android:scaleType="fitXY"
+                android:src="@drawable/home_item_radio_img_bg"/>
+
+        <ImageView
+                android:id="@+id/feed_img"
+                android:scaleType="centerCrop"
+                android:src="@drawable/feed_default"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/feed_card_height"/>
+
+        <TextView
+                android:id="@+id/feed_subtitle"
+                android:layout_width="@dimen/default_144"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="1"
+                android:textSize="@dimen/default_text_14"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/main_item_label_margin_bottom"
+                android:alpha="0.6"
+                android:text="@string/music_news_others"/>
+
+        <TextView
+                android:id="@+id/feed_title"
+                android:layout_width="@dimen/default_144"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/default_text_22"
+                android:textColor="@color/white"
+                android:layout_above="@id/feed_subtitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/main_item_title_margin_bottom"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:focusable="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:focusableInTouchMode="true"
+                android:text="@string/walkman"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<resources>
+    <string name="app_name">DuerOSLauncher</string>
+    <string name="activity_not_found">应用未安装</string>
+    <string name="app_cannot_uninstall">该应用不可卸载！</string>
+    <string name="one">一</string>
+    <string name="two">二</string>
+    <string name="three">三</string>
+    <string name="four">四</string>
+    <string name="five">五</string>
+    <string name="six">六</string>
+    <string name="sunday">日</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="week">星期</string>
+    <string name="traffic_restriction">限行</string>
+    <string name="my">我的</string>
+    <string name="telephone">电话</string>
+    <string name="radio">收音机</string>
+    <string name="player">播放器</string>
+    <string name="car_settings">车机设置</string>
+    <string name="more">更多</string>
+    <string name="word">文字</string>
+    <string name="walk_man">随心听</string>
+    <string name="music_news_others">音乐、新闻、段子</string>
+    <string name="default_time">00:00</string>
+    <string name="default_date">2017年5月5日</string>
+    <string name="friday">星期五</string>
+    <string name="traffic_restriction_info">限行3/8</string>
+    <string name="default_weather">暂无信息</string>
+</resources>

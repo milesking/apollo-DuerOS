@@ -1,0 +1,1 @@
+include ':core', ':map-sdk', ':app-headunit-open', ':app-mirror-open'

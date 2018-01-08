@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg_selector"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="@dimen/default_10">
+    <RelativeLayout
+            android:id="@+id/grid_item_rl_app_icon"
+            android:layout_width="@dimen/default_72"
+            android:layout_height="@dimen/default_64"
+            android:layout_centerHorizontal="true">
+        <ImageView
+                android:id="@+id/grid_item_app_icon"
+                android:src="@drawable/home_more_ic_account"
+                android:layout_width="@dimen/default_56"
+                android:layout_height="@dimen/default_56"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+        />
+        <ImageView
+                android:id="@+id/grid_item_app_delete"
+                android:src="@drawable/ic_delete"
+                android:layout_width="@dimen/default_16"
+                android:layout_height="@dimen/default_16"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <TextView
+            android:id="@+id/grid_item_app_name"
+            android:layout_marginTop="@dimen/default_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/grid_item_rl_app_icon"
+            android:layout_centerHorizontal="true"
+            android:lines="1"
+            android:textSize="@dimen/default_text_13"
+            android:text="@string/word" />
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.baidu.che.codriverlauncher"
+          android:versionCode="12"
+          android:versionName="1.0.12">
+
+    <uses-sdk
+            android:minSdkVersion="16"
+            android:targetSdkVersion="21"/>
+
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+
+    <application
+            android:name=".LauncherApp"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:theme="@style/AppTheme"
+            android:allowBackup="false">
+
+
+        <activity android:name=".home.HomeActivity"
+                  android:launchMode="singleTask"
+                  android:excludeFromRecents="true"
+                  android:clearTaskOnLaunch="true"
+                  android:stateNotNeeded="true"
+                  android:windowSoftInputMode="adjustPan"
+                  android:resumeWhilePausing="true"
+                  android:taskAffinity=""
+                  android:enabled="true"
+                  android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.MONKEY"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".more.MoreActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="landscape">
+        </activity>
+    </application>
+
+</manifest>

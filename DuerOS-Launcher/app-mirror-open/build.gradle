@@ -1,0 +1,173 @@
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+import java.util.regex.Pattern
+
+apply plugin: 'com.android.application'
+apply from: "${project.rootDir}/config.gradle"
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+android {
+    compileSdkVersion project.ext.compileSdkVersion
+    buildToolsVersion project.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId getParamManifest("package")
+        minSdkVersion project.ext.minSdkVer
+        targetSdkVersion project.ext.targetSdkVer
+        versionCode Integer.parseInt(getParamManifest("versionCode"))
+        versionName getParamManifest("versionName")
+    }
+
+    signingConfigs {
+
+        release {
+            storeFile file("keystore/debug.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+
+        debug {
+            storeFile file("keystore/debug.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+
+    buildTypes {
+        release {
+            multiDexEnabled false
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            multiDexEnabled false
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds true
+        abortOnError false
+    }
+
+    dexOptions {
+        javaMaxHeapSize project.ext.javaMaxHeapSize
+        maxProcessCount = 4
+        jumboMode = true
+    }
+
+    compileOptions {
+        sourceCompatibility project.ext.sourceCompatibility
+        targetCompatibility project.ext.targetCompatibility
+    }
+
+    aaptOptions {
+        cruncherEnabled true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+            java.srcDirs = ['src/main/java']
+            resources.srcDirs = ['src/main/java']
+            aidl.srcDirs = ['src/main/java']
+            renderscript.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+
+    splits {
+        abi {
+            enable = true
+            reset()
+            include 'armeabi'
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                if (variant.buildType.name.equals('release')) {
+                    def fileName = "DuerOS_Launcher_Mirror_Open_${defaultConfig.versionName}_Release" + ".apk"
+                    output.outputFile = new File(outputFile.parent, fileName)
+                } else if (variant.buildType.name.equals('debug')) {
+                    def fileName = "DuerOS_Launcher_Mirror_Open_${defaultConfig.versionName}_Debug" + ".apk"
+                    output.outputFile = new File(outputFile.parent, fileName)
+                }
+            }
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile 'com.android.support:recyclerview-v7:25.0.0'
+    compile project(':core')
+
+}
+
+def getParamManifest(param) {
+    def manifestFile = file("src/main/AndroidManifest.xml")
+    def pattern = Pattern.compile("$param=\"(.*)\"");
+    def matcher = pattern.matcher(manifestFile.getText())
+    matcher.find()
+    return matcher.group(1)
+}
+
+def enableLoggerDebug(boolean flag) {
+    def loggerFilePath = "${project.rootDir}/core/src/main/java/com/baidu/che/codriverlauncher/CommonParams.java"
+    def updateDebug = new File(loggerFilePath).getText('UTF-8').replaceAll("LOG_LEVEL = Log.*;",
+            flag ? "LOG_LEVEL = Log.VERBOSE;" : "LOG_LEVEL = Log.ERROR;")
+    new File(loggerFilePath).write(updateDebug, 'UTF-8')
+    println flag ? "LOG_LEVEL = Log.VERBOSE;" : "LOG_LEVEL = Log.ERROR;"
+}
+
+
+task openLog() {
+    doLast {
+        enableLoggerDebug(true)
+    }
+
+}
+
+task closeLog() {
+    doLast {
+        enableLoggerDebug(false)
+    }
+}

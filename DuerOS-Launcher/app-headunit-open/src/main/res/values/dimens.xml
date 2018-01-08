@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<resources>
+    <dimen name="main_screen_margin">16dp</dimen>
+    <dimen name="status_bar_width">64dp</dimen>
+    <dimen name="status_bar_icon_margin">8dp</dimen>
+    <dimen name="mic_margin_bottom">21dp</dimen>
+    <dimen name="setting_bar_height">96dp</dimen>
+    <dimen name="feed_card_width">264dp</dimen>
+    <dimen name="feed_card_height">104dp</dimen>
+    <dimen name="text_time_height">58dp</dimen>
+    <dimen name="feed_title_top_margin">23dp</dimen>
+    <dimen name="feed_title_left_margin">8dp</dimen>
+    <dimen name="feed_progress_top_margin">24dp</dimen>
+    <dimen name="dp170">170dp</dimen>
+    <dimen name="dp80">80dp</dimen>
+
+    <dimen name="bar_text_size">13sp</dimen>
+    <dimen name="date_text_size">12sp</dimen>
+    <dimen name="time_text_size">66sp</dimen>
+    <dimen name="feed_title_text_size">14sp</dimen>
+    <dimen name="feed_subtitle_text_size">12sp</dimen>
+
+    <!-- default !-->
+    <dimen name="default_2">2dp</dimen>
+    <dimen name="default_4">4dp</dimen>
+    <dimen name="default_6">6dp</dimen>
+    <dimen name="default_7">7dp</dimen>
+    <dimen name="default_8">8dp</dimen>
+    <dimen name="default_10">10dp</dimen>
+    <dimen name="default_11">11dp</dimen>
+    <dimen name="default_12">12dp</dimen>
+    <dimen name="default_14">14dp</dimen>
+    <dimen name="default_16">16dp</dimen>
+    <dimen name="default_18">18dp</dimen>
+    <dimen name="default_19">19dp</dimen>
+    <dimen name="default_20">20dp</dimen>
+    <dimen name="default_21">21dp</dimen>
+    <dimen name="default_22">22dp</dimen>
+    <dimen name="default_23">23dp</dimen>
+    <dimen name="default_24">24dp</dimen>
+    <dimen name="default_26">26dp</dimen>
+    <dimen name="default_27">27dp</dimen>
+    <dimen name="default_28">28dp</dimen>
+    <dimen name="default_30">30dp</dimen>
+    <dimen name="default_32">32dp</dimen>
+    <dimen name="default_34">34dp</dimen>
+    <dimen name="default_38">38dp</dimen>
+    <dimen name="default_40">40dp</dimen>
+    <dimen name="default_44">44dp</dimen>
+    <dimen name="default_48">48dp</dimen>
+    <dimen name="default_50">50dp</dimen>
+    <dimen name="default_51">51dp</dimen>
+    <dimen name="default_54">54dp</dimen>
+    <dimen name="default_56">56dp</dimen>
+    <dimen name="default_57">57dp</dimen>
+    <dimen name="default_60">60dp</dimen>
+    <dimen name="default_61">61dp</dimen>
+    <dimen name="default_62">62dp</dimen>
+    <dimen name="default_64">64dp</dimen>
+    <dimen name="default_67">67dp</dimen>
+    <dimen name="default_72">72dp</dimen>
+    <dimen name="default_80">80dp</dimen>
+    <dimen name="default_88">88dp</dimen>
+    <dimen name="default_96">96dp</dimen>
+    <dimen name="default_110">110dp</dimen>
+    <dimen name="default_112">112dp</dimen>
+    <dimen name="default_120">120dp</dimen>
+    <dimen name="default_128">128dp</dimen>
+    <dimen name="default_140">140dp</dimen>
+    <dimen name="default_159">159dp</dimen>
+    <dimen name="default_170">170dp</dimen>
+    <dimen name="default_176">176dp</dimen>
+    <!-- default end !-->
+    <!-- text size !-->
+    <dimen name="default_text_12">12sp</dimen>
+    <dimen name="default_text_13">13sp</dimen>
+    <dimen name="default_text_14">14sp</dimen>
+    <dimen name="default_text_16">16sp</dimen>
+    <dimen name="default_text_18">18sp</dimen>
+    <dimen name="default_text_20">20sp</dimen>
+    <dimen name="default_text_24">24sp</dimen>
+    <dimen name="default_text_26">26sp</dimen>
+    <dimen name="default_text_28">28sp</dimen>
+    <dimen name="default_text_30">30sp</dimen>
+    <dimen name="default_text_32">32sp</dimen>
+    <dimen name="default_text_34">34sp</dimen>
+    <dimen name="default_text_60">60sp</dimen>
+    <dimen name="default_text_80">80sp</dimen>
+    <!-- text size end !-->
+</resources>

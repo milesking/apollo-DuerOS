@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<resources>
+    <string name="app_name">DuerOSLauncher</string>
+    <string name="app_cannot_uninstall">该应用不可卸载！</string>
+    <string name="has_no_recorder">未接入行车记录仪</string>
+    <string name="has_no_phone">未接入蓝牙电话</string>
+    <string name="has_no_settings">未接入系统设置</string>
+    <string name="one">一</string>
+    <string name="two">二</string>
+    <string name="three">三</string>
+    <string name="four">四</string>
+    <string name="five">五</string>
+    <string name="six">六</string>
+    <string name="sunday">日</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day_and_week">日 星期</string>
+    <string name="baidu_map_for_car">百度地图汽车版</string>
+    <string name="map_auto">MapAuto</string>
+    <string name="my">我的</string>
+    <string name="telephone">电话</string>
+    <string name="settings">设置</string>
+    <string name="more">更多</string>
+    <string name="walkman">随心听</string>
+    <string name="music_news_others">音乐、新闻、段子</string>
+    <string name="default_date">2017年01月01日 星期日</string>
+    <string name="default_time">00:00</string>
+    <string name="car_recorder">行车记录仪</string>
+    <string name="car_recorder_time">00:00:00</string>
+</resources>

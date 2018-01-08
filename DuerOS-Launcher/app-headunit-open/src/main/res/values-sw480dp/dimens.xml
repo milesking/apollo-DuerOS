@@ -1,0 +1,39 @@
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<resources>
+    <dimen name="main_screen_margin">21.33dp</dimen>
+    <dimen name="status_bar_width">85.33dp</dimen>
+    <dimen name="status_bar_icon_margin">10.67dp</dimen>
+    <dimen name="mic_margin_bottom">28dp</dimen>
+    <dimen name="setting_bar_height">128dp</dimen>
+    <dimen name="feed_card_width">352dp</dimen>
+    <dimen name="feed_card_height">138.67dp</dimen>
+    <dimen name="text_time_height">77.33dp</dimen>
+    <dimen name="feed_title_top_margin">30.67dp</dimen>
+    <dimen name="feed_title_left_margin">10.67dp</dimen>
+    <dimen name="feed_progress_top_margin">32dp</dimen>
+    <dimen name="dp170">226.7dp</dimen>
+    <dimen name="dp80">106.7dp</dimen>
+
+    <dimen name="bar_text_size">17.33sp</dimen>
+    <dimen name="date_text_size">16sp</dimen>
+    <dimen name="time_text_size">88sp</dimen>
+    <dimen name="feed_title_text_size">18.67sp</dimen>
+    <dimen name="feed_subtitle_text_size">16sp</dimen>
+
+</resources>

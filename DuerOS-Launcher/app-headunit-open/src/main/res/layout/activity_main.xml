@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2017 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/main_screen_margin"
+        android:paddingRight="@dimen/main_screen_margin"
+        android:background="@drawable/bg_main">
+    <RelativeLayout
+            android:id="@+id/main_layout_status_bar"
+            android:layout_width="@dimen/status_bar_width"
+            android:layout_height="match_parent">
+        <ImageView
+                android:id="@+id/main_img_network"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_net_none"/>
+        <ImageView
+                android:id="@+id/main_img_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/main_img_network"
+                android:src="@drawable/bt_off"
+                android:layout_marginTop="@dimen/status_bar_icon_margin"/>
+        <ImageView
+                android:id="@+id/main_img_gps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/main_img_bt"
+                android:src="@drawable/ic_gps_3"
+                android:layout_marginTop="@dimen/status_bar_icon_margin"/>
+        <ImageView
+                android:id="@+id/main_img_voice_bt"
+                android:layout_width="@dimen/status_bar_width"
+                android:layout_height="@dimen/status_bar_width"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button_bg_circle_selector"
+                android:layout_marginBottom="6dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_voice"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/main_setting_bar"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/main_layout_status_bar"
+            android:background="#7F343951"
+            android:layout_marginBottom="@dimen/main_screen_margin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_bar_height">
+        <TextView
+                android:id="@+id/main_tv_personnal_center"
+                android:text="@string/my"
+                android:textSize="@dimen/bar_text_size"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerInParent="true"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/home_more_ic_account_selector"/>
+
+        <TextView
+                android:id="@+id/main_tv_phone"
+                android:text="@string/telephone"
+                android:textSize="@dimen/bar_text_size"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/home_more_ic_phone_selector"/>
+        <TextView
+                android:id="@+id/main_tv_video"
+                android:text="@string/radio"
+                android:textSize="@dimen/bar_text_size"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/home_more_ic_fm_selector"/>
+        <TextView
+                android:id="@+id/main_tv_radio"
+                android:text="@string/player"
+                android:textSize="@dimen/bar_text_size"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/home_more_ic_video_selector"/>
+        <TextView
+                android:id="@+id/main_tv_setting"
+                android:text="@string/car_settings"
+                android:textSize="@dimen/bar_text_size"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/home_more_ic_setting_selector"/>
+        <TextView
+                android:id="@+id/main_tv_more"
+                android:text="@string/more"
+                android:textSize="@dimen/bar_text_size"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/home_more_ic_application_selector"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/main_layout_status_bar"
+            android:layout_above="@id/main_setting_bar"
+            android:layout_marginBottom="@dimen/main_screen_margin"
+            android:orientation="horizontal">
+        <fragment
+                android:id="@+id/map_fragment"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/main_screen_margin"
+                android:name="com.baidu.che.codriverlauncher.ui.MapFragment"/>
+
+        <LinearLayout
+                android:layout_width="@dimen/feed_card_width"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <fragment
+                    android:id="@+id/main_fragment_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:name="com.baidu.che.codriverlauncher.ui.InfoFragment"/>
+            <fragment
+                    android:id="@+id/main_fragment_audio"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/feed_card_height"
+                    android:layout_marginTop="@dimen/main_screen_margin"
+                    android:name="com.baidu.che.codriverlauncher.ui.FeedFragment"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
