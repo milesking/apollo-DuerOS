@@ -20,3 +20,5 @@ Lanucher是android终端机上首个用户图形交互的界面，是启动安�
 
 2.主页聚合了语音，地图，音乐等入口，车载场景使用更加便捷
 
+## 百度Apollo车载语音DSP硬件设计方案
+[这套方案](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/DSP-Solution-For-DuerOS)分为前端信号采集、语音信号处理，前端信号采集是通过一组MIC阵列（2-3MIC）来实现的，语音信号处理则是将DSP芯片嵌入到车机主板上，由DSP进行回声消噪、定向拾音等处理，最后将DSP将结果信号输送到主CPU层，继而灌入百度语音ASR引擎。

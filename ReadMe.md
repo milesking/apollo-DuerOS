@@ -20,3 +20,8 @@ Lanucher is the interface of the first user graphical interaction of the Android
 1. For the driving scene design, using lightweight, scientific sense of the UI design
 
 2. The home page aggregated voice, maps, music and other entrances, the car scene is more convenient to use
+
+## DSP Solution for Apollo DuerOS
+[The  DSP solution](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/DSP-Solution-For-DuerOS) includes two parts: front-end signal acquisition and voice signal processing.
+Front-end signal acquisition is completed through a set of MIC array (2~3 MIC), while the voice signal processing is achieved by DSP. The DSP chips embedded into the motherboard of the vehicle would work on echo’s noise cancellation and directional voice pick-up, and then convey the processed signal to the main CPU layer, and finally the signals would flow into the Baidu Voice ASR Engine.
+
