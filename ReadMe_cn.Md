@@ -14,7 +14,7 @@ CarLife手机端支持iOS和Android平台，车机端支持Android、Linux、WIN
 ## DuerOS Launcher
 
 Lanucher是android终端机上首个用户图形交互的界面，是启动安装在终端机上其他应用的入口(电话，收音机等app需自行接入)。
-![Launcher Screen](Launcher.png)
+![Launcher Screen](Launcher.jpeg)
 ### [DuerOS Launcher](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/DuerOS-Launcher)有如下特点:
 1.针对驾驶场景设计，采用轻量化、科技感的UI设计
 
@@ -23,4 +23,4 @@ Lanucher是android终端机上首个用户图形交互的界面，是启动安�
 ## 百度Apollo车载语音DSP硬件设计方案
 [这套方案](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/DSP-Solution-For-DuerOS)分为前端信号采集、语音信号处理.
 ![DSPSolution](DSPDesign.png)
-前端信号采集是通过一组MIC阵列（2-3MIC）来实现的，语音信号处理则是将DSP芯片嵌入到车机主板上，由DSP进行回声消噪、定向拾音等处理，最后将DSP将结果信号输送到主CPU层，继而灌入百度语音ASR引擎。
+前端信号采集是通过一组MIC阵列（2-3MIC）来实现的，语音信号处理则是将DSP芯片嵌入到车机主板上，由DSP进行回声消噪、定向拾音等处理，最后将DSP结果信号输送到主CPU层，继而灌入百度语音ASR引擎。
