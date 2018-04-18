@@ -1,1 +1,1 @@
-include ':core', ':map-sdk', ':app-headunit-open', ':app-mirror-open'
+include ':core', ':map-sdk', ':app-headunit-open', ':app-mirror-open', ':app-headunit-portrait-open'

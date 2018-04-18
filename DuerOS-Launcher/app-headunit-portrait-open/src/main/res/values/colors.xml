@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2018 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="sixty_percent_white">#CCCCCC</color>
+    <color name="feed_bg">#80363B54</color>
+    <color name="status_bar">#162239</color>
+
+    <!-- AboutDuerOsActivity -->
+    <color name="about_copyright">#999999</color>
+    <color name="about_look_item">#FF008CFF</color>
+
+    <!-- FaceLoginActivity -->
+    <color name="face_login_tv">#E5E5E5</color>
+
+    <!-- MainActivity -->
+    <color name="setting_bar_bg">#7F343951</color>
+
+
+    <!-- FeedFragment -->
+    <color name="feed_frag_bg">#272f41</color>
+
+    <!-- MapFragment -->
+    <color name="progress_rl_bg">#272f41</color>
+    <color name="latitude">#cccccc</color>
+
+    <!-- InfoFragment -->
+    <color name="info_bg">#272f41</color>
+</resources>

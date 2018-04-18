@@ -1,0 +1,110 @@
+<!--
+/******************************************************************************
+ * Copyright 2018 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<resources>
+    <string name="app_name">DuerOSLauncher</string>
+    <string name="activity_not_found">应用未安装</string>
+    <string-array name="bearing_list_text">
+        <item>N</item>
+        <item>NE</item>
+        <item>E</item>
+        <item>SE</item>
+        <item>S</item>
+        <item>SW</item>
+        <item>W</item>
+        <item>NW</item>
+    </string-array>
+    <string name="degree">°</string>
+
+    <!-- AboutDuerOsActivity -->
+    <string name="about">关于DuerOS</string>
+    <string name="about_copyright">Copyright © 2017 Baidu All Rights Reserved</string>
+    <string name="about_look_item">查看服务条款</string>
+
+    <!-- FaceLoginActivity -->
+    <string name="no_face_scan_login">尚未进行人脸扫描登录</string>
+    <string name="login_right_now">立即登录</string>
+    <string name="face_login_hi">，你好</string>
+    <string name="face_login_exit_login">退出登录</string>
+    <string name="face_login_unsuccessful">人脸检测未成功</string>
+    <string name="face_login_check_again">重新检测</string>
+    <string name="face_login_not_register">请进行人脸注册后重试</string>
+    <string name="face_login_not_login">尚未进行人脸扫描登录</string>
+    <string name="face_logged_username">XXX，你好</string>
+    <string name="face_logged_order">我的订单</string>
+    <string name="face_logged_wallet">我的钱包</string>
+    <string name="face_logged_info">资料设定</string>
+    <string name="face_login_tv">退出登录</string>
+
+    <!-- InfoFragment -->
+    <string-array name="info_week">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </string-array>
+    <string name="info_week">星期</string>
+    <string name="info_year">年</string>
+    <string name="info_month">月</string>
+    <string name="info_day">日</string>
+    <string name="info_limit_go">限行</string>
+
+    <!-- MapFragment -->
+    <string name="map_north_latitude">北纬</string>
+    <string name="map_south_latitude">南纬</string>
+    <string name="map_east_longitude">东经</string>
+    <string name="map_west_longitude">西经</string>
+
+    <!-- MoreActivity -->
+    <string name="more">更多</string>
+    <string name="more_not_uninstall">该应用不可卸载！</string>
+
+
+    <!-- MainActivity -->
+    <string name="main_call">电话</string>
+    <string name="main_radio">收音机</string>
+    <string name="main_player">播放器</string>
+    <string name="main_setting">车机设置</string>
+    <string name="main_mine">我的</string>
+    <string name="main_more">更多</string>
+
+    <!-- GridView -->
+    <string name="grid_view">文字</string>
+
+    <!-- FeedFragment -->
+    <string name="feed_subtitle">音乐、新闻、段子</string>
+    <string name="feed_subtitle1">Meghan</string>
+    <string name="feed_title">随心听</string>
+    <string name="feed_title1">Lips Are Movin</string>
+
+    <!-- MapFragment -->
+    <string name="map_direction">N</string>
+    <string name="map_degree">0°</string>
+    <string name="north_latitude_text">北纬－－</string>
+    <string name="east_longitude_text">东经－－</string>
+
+    <!-- InfoFragment -->
+    <string name="info_time">00:00</string>
+    <string name="info_date">2017年5月5日</string>
+    <string name="info_weeks">星期五</string>
+    <string name="info_traffic">限行3/8</string>
+    <string name="info_weather">晴转多云</string>
+
+</resources>

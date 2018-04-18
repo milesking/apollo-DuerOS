@@ -1,0 +1,2 @@
+BUILD_SUBMITTER  -x -u ./ -c "cd baidu/iov-dueros/launcher && bash -x build-ci.sh" -e UBUNTU -m baidu/iov-dueros/launcher
+BUILD_SUBMITTER_COVERITY -m baidu/iov-dueros/launcher  -u ./ -x -e UBUNTU -c "cd baidu/iov-dueros/launcher && export covpath=\$PWD && mkdir output && mkdir coverity  && /home/scmtools/buildkit/coverity_android/coverity_7.5.1/cov-analysis-linux64/bin/cov-build --dir coverity sh build-ci.sh && mv \$covpath/coverity \$covpath/output/coverity"

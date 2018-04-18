@@ -1,0 +1,180 @@
+<!--
+/******************************************************************************
+ * Copyright 2018 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<resources>
+    <dimen name="main_screen_margin">16dp</dimen>
+    <dimen name="status_bar_width">44dp</dimen>
+    <dimen name="status_bar_icon_margin">8dp</dimen>
+    <dimen name="mic_margin_bottom">21dp</dimen>
+    <dimen name="feed_card_width">264dp</dimen>
+    <dimen name="text_time_height">58dp</dimen>
+    <dimen name="feed_title_top_margin">23dp</dimen>
+    <dimen name="feed_title_left_margin">8dp</dimen>
+    <dimen name="feed_progress_top_margin">24dp</dimen>
+    <dimen name="dp170">170dp</dimen>
+    <dimen name="dp80">80dp</dimen>
+
+    <dimen name="bar_text_size">13sp</dimen>
+    <dimen name="date_text_size">12sp</dimen>
+    <dimen name="time_text_size">66sp</dimen>
+
+    <!-- default !-->
+    <dimen name="default_0">0dp</dimen>
+    <dimen name="default_2">2dp</dimen>
+    <dimen name="default_4">4dp</dimen>
+    <dimen name="default_6">6dp</dimen>
+    <dimen name="default_7">7dp</dimen>
+    <dimen name="default_8">8dp</dimen>
+    <dimen name="default_10">10dp</dimen>
+    <dimen name="default_11">11dp</dimen>
+    <dimen name="default_12">12dp</dimen>
+    <dimen name="default_14">14dp</dimen>
+    <dimen name="default_16">16dp</dimen>
+    <dimen name="default_18">18dp</dimen>
+    <dimen name="default_19">19dp</dimen>
+    <dimen name="default_20">20dp</dimen>
+    <dimen name="default_21">21dp</dimen>
+    <dimen name="default_22">22dp</dimen>
+    <dimen name="default_23">23dp</dimen>
+    <dimen name="default_24">24dp</dimen>
+    <dimen name="default_26">26dp</dimen>
+    <dimen name="default_27">27dp</dimen>
+    <dimen name="default_28">28dp</dimen>
+    <dimen name="default_30">30dp</dimen>
+    <dimen name="default_32">32dp</dimen>
+    <dimen name="default_34">34dp</dimen>
+    <dimen name="default_38">38dp</dimen>
+    <dimen name="default_40">40dp</dimen>
+    <dimen name="default_44">44dp</dimen>
+    <dimen name="default_48">48dp</dimen>
+    <dimen name="default_50">50dp</dimen>
+    <dimen name="default_51">51dp</dimen>
+    <dimen name="default_54">54dp</dimen>
+    <dimen name="default_56">56dp</dimen>
+    <dimen name="default_57">57dp</dimen>
+    <dimen name="default_60">60dp</dimen>
+    <dimen name="default_61">61dp</dimen>
+    <dimen name="default_62">62dp</dimen>
+    <dimen name="default_64">64dp</dimen>
+    <dimen name="default_67">67dp</dimen>
+    <dimen name="default_72">72dp</dimen>
+    <dimen name="default_80">80dp</dimen>
+    <dimen name="default_88">88dp</dimen>
+    <dimen name="default_96">96dp</dimen>
+    <dimen name="default_110">110dp</dimen>
+    <dimen name="default_112">112dp</dimen>
+    <dimen name="default_120">120dp</dimen>
+    <dimen name="default_128">128dp</dimen>
+    <dimen name="default_140">140dp</dimen>
+    <dimen name="default_159">159dp</dimen>
+    <dimen name="default_170">170dp</dimen>
+    <dimen name="default_176">176dp</dimen>
+    <!-- default end !-->
+    <!-- text size !-->
+    <dimen name="default_text_12">12sp</dimen>
+    <dimen name="default_text_13">13sp</dimen>
+    <dimen name="default_text_14">14sp</dimen>
+    <dimen name="default_text_16">16sp</dimen>
+    <dimen name="default_text_18">18sp</dimen>
+    <dimen name="default_text_20">20sp</dimen>
+    <dimen name="default_text_24">24sp</dimen>
+    <dimen name="default_text_26">26sp</dimen>
+    <dimen name="default_text_28">28sp</dimen>
+    <dimen name="default_text_30">30sp</dimen>
+    <dimen name="default_text_32">32sp</dimen>
+    <dimen name="default_text_34">34sp</dimen>
+    <dimen name="default_text_60">60sp</dimen>
+    <dimen name="default_text_80">80sp</dimen>
+    <!-- text size end !-->
+
+    <!--屏幕适配-->
+    <!--home-->
+    <dimen name="setting_bar_height">153.3dp</dimen>
+    <dimen name="setting_bar_margin_bottom">20dp</dimen>
+    <dimen name="setting_bar_margin_left">11.3dp</dimen>
+    <dimen name="tv_phone_padding">5dp</dimen>
+    <dimen name="map_fragment_width">353.3dp</dimen>
+    <dimen name="map_fragment_height">353.3dp</dimen>
+    <dimen name="info_fragment_width">216.7dp</dimen>
+    <dimen name="info_fragment_height">353.3dp</dimen>
+    <dimen name="audio_fragment_height">146.7dp</dimen>
+    <dimen name="audio_fragment_margin_top">20dp</dimen>
+    <!--map-->
+    <dimen name="pointer_margin_top">22dp</dimen>
+    <dimen name="tv_direction_padding">20dp</dimen>
+    <dimen name="tv_direction_size">32sp</dimen>
+    <dimen name="tv_weidu_padding_bottom">13.3dp</dimen>
+    <!--info-->
+    <dimen name="tv_time_margin_top">30.7dp</dimen>
+    <dimen name="tv_time_size">70.7dp</dimen>
+    <dimen name="detail_layout_margin_top">10.7dp</dimen>
+    <dimen name="detail_layout_padding">16.7dp</dimen>
+    <dimen name="img_weather_height">113.3dp</dimen>
+    <dimen name="img_weather_margin_top">38dp</dimen>
+    <dimen name="tv_weather_margin_top">14.7dp</dimen>
+    <!--feed-->
+    <dimen name="feed_card_height">146.7dp</dimen>
+    <dimen name="feed_title_margin_top">20dp</dimen>
+    <dimen name="feed_title_text_size">14sp</dimen>
+    <dimen name="feed_subtitle_text_size">12sp</dimen>
+    <dimen name="progress_margin_bottom">22dp</dimen>
+    <dimen name="progress_height">2.7dp</dimen>
+    <!--more-->
+    <dimen name="app_icon_width">82.7dp</dimen>
+    <dimen name="app_icon_height">83.3dp</dimen>
+
+    <!-- FaceLoginActivity -->
+    <dimen name="face_login_logo_width">400dp</dimen>
+    <dimen name="face_login_logo_top">30dp</dimen>
+    <dimen name="face_logged_avatar_width">330dp</dimen>
+    <dimen name="face_logged_avatar_top">65dp</dimen>
+    <dimen name="face_logged_username_top">50dp</dimen>
+    <dimen name="face_logged_username_size">30sp</dimen>
+    <dimen name="face_login_view_width">0dp</dimen>
+    <dimen name="face_login_order_padding">10dp</dimen>
+    <dimen name="face_login_order_size">20sp</dimen>
+    <dimen name="face_login_tv_width">280dp</dimen>
+    <dimen name="face_login_tv_height">70dp</dimen>
+    <dimen name="face_login_tv_size">30sp</dimen>
+
+    <!-- MainActivity -->
+    <dimen name="main_layout_padding_left">13.3dp</dimen>
+    <dimen name="main_layout_padding_right">24.7dp</dimen>
+    <dimen name="main_layout_padding_top">26.7dp</dimen>
+    <dimen name="main_view_width">7dp</dimen>
+    <dimen name="info_fragment_margin_left">20dp</dimen>
+
+
+    <!-- MapFragment -->
+    <dimen name="degree_size">60sp</dimen>
+    <dimen name="latitude_padding_left">20dp</dimen>
+    <dimen name="latitude_size">16sp</dimen>
+
+    <!-- InfoFragment -->
+    <dimen name="info_time_left">6.7dp</dimen>
+    <dimen name="info_week_left">16dp</dimen>
+    <dimen name="info_traffic_top">2.7dp</dimen>
+
+    <!-- Service terms -->
+    <dimen name="service_terms">18sp</dimen>
+    <dimen name="terms_item_top">14dp</dimen>
+    <dimen name="terms_item">16sp</dimen>
+    <dimen name="terms_item_extra">12dp</dimen>
+    <dimen name="terms_item_left">72dp</dimen>
+    <dimen name="terms_item_right">56dp</dimen>
+    <dimen name="page_cover_height">36dp</dimen>
+</resources>

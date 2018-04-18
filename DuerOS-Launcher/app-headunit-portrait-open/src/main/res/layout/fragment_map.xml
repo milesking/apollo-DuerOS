@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2018 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <FrameLayout
+            android:id="@+id/bmap_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true">
+    </FrameLayout>
+
+
+    <RelativeLayout
+            android:id="@+id/progress_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/progress_rl_bg">
+        <ImageView
+                android:id="@+id/im_compass"
+                android:layout_centerInParent="true"
+                android:src="@drawable/compass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <ImageView
+                android:layout_marginTop="@dimen/pointer_margin_top"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/pointer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:paddingLeft="@dimen/tv_direction_padding"
+                android:paddingRight="@dimen/default_0"
+                android:paddingTop="@dimen/tv_direction_padding"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map_direction"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_direction_size"
+                android:id="@+id/tv_direction"
+                android:paddingStart="@dimen/tv_direction_padding"
+                android:layout_alignParentStart="true" android:paddingEnd="@dimen/default_0"/>
+
+        <TextView
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_degree"
+                android:text="@string/map_degree"
+                android:textSize="@dimen/degree_size"
+                android:textColor="@android:color/white"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:paddingBottom="@dimen/tv_weidu_padding_bottom"
+                android:paddingLeft="@dimen/latitude_padding_left"
+                android:paddingRight="@dimen/default_0"
+                android:text="@string/north_latitude_text"
+                android:textSize="@dimen/latitude_size"
+                android:textColor="@color/latitude"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/tv_weidu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/latitude_padding_left"
+                android:layout_alignParentStart="true"
+                android:paddingEnd="@dimen/default_0"/>
+
+        <TextView
+                android:paddingBottom="@dimen/tv_weidu_padding_bottom"
+                android:paddingRight="@dimen/latitude_padding_left"
+                android:paddingLeft="@dimen/default_0"
+                android:text="@string/east_longitude_text"
+                android:textSize="@dimen/latitude_size"
+                android:textColor="@color/latitude"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/tv_longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/latitude_padding_left"
+                android:layout_alignParentEnd="true"
+                android:paddingStart="@dimen/default_0"/>
+
+
+        <!--
+                <ProgressBar
+                        android:id="@+id/upgrade_progressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_56"
+                        android:layout_centerInParent="true"
+                        style="@style/ProgressCircle"/>
+        -->
+    </RelativeLayout>
+
+    <View
+            android:id="@+id/map_view_recover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </View>
+
+
+</RelativeLayout>

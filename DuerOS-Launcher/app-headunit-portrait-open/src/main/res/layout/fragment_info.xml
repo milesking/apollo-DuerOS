@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ * Copyright 2018 The Baidu Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *****************************************************************************/
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/info_bg"
+              android:orientation="vertical">
+
+    <TextView
+            android:fontFamily="sans-serif-thin"
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_time_margin_top"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/info_time_left"
+            android:paddingRight="@dimen/info_time_left"
+            android:text="@string/info_time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_time_size"/>
+
+    <LinearLayout
+            android:id="@+id/detail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/detail_layout_margin_top"
+            android:paddingLeft="@dimen/detail_layout_padding"
+            android:paddingRight="@dimen/detail_layout_padding">
+
+        <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/sixty_percent_white"
+                android:textSize="@dimen/date_text_size"
+                tools:text="@string/info_date"/>
+
+        <View
+                android:layout_width="@dimen/face_login_view_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        <TextView
+                android:id="@+id/tv_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/info_week_left"
+                android:maxLines="1"
+                android:textColor="@color/sixty_percent_white"
+                android:textSize="@dimen/date_text_size"
+                tools:text="@string/info_weeks"
+                android:layout_marginStart="@dimen/info_week_left"/>
+
+        <View
+                android:id="@+id/space_view"
+                android:layout_width="@dimen/face_login_view_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/info_traffic_top"
+            android:id="@+id/tv_traffic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/info_time_left"
+            android:paddingRight="@dimen/info_time_left"
+            android:textColor="@color/sixty_percent_white"
+            android:textSize="@dimen/date_text_size"
+            tools:text="@string/info_traffic"/>
+
+    <ImageView
+            android:id="@+id/img_weather"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_weather_height"
+            android:layout_marginTop="@dimen/img_weather_margin_top"
+            android:src="@drawable/cloudy"/>
+
+    <TextView
+            android:id="@+id/tv_weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_weather_margin_top"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/info_weather"
+            android:textColor="@color/sixty_percent_white"
+            android:textSize="@dimen/date_text_size"/>
+</LinearLayout>
