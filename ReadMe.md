@@ -1,8 +1,6 @@
 # Apollo-DuerOS
  Apollo-DuerOS is a set of telematics products associated with the Apollo , and there are several open source products at present.
  
- Apollo Team now proudly presents to you the latest version 2.5.
-
 ## CarLife for Android Vehicle 
 
 [CarLife for Android Vehicle](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/CarLife-Android-Vehicle) is the implementation of the CarLife protocol on the Android platform.
