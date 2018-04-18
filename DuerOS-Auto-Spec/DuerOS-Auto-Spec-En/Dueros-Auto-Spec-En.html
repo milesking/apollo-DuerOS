@@ -1,0 +1,1889 @@
+<html>
+  <head>
+		  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>spec.html</title>
+
+			<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+			<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+			<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+
+		  <style>
+			pre {
+			    counter-reset: line-numbering;
+			    border: solid 1px #d9d9d9;
+			    border-radius: 0;
+			    background: #fff;
+			    padding: 0;
+			    line-height: 23px;
+			    margin-bottom: 30px;
+			    white-space: pre;
+			    overflow-x: auto;
+			    word-break: inherit;
+			    word-wrap: inherit;
+			}
+
+			pre a::before {
+			  content: counter(line-numbering);
+			  counter-increment: line-numbering;
+			  padding-right: 1em; /* space after numbers */
+			  width: 25px;
+			  text-align: right;
+			  opacity: 0.7;
+			  display: inline-block;
+			  color: #aaa;
+			  background: #eee;
+			  margin-right: 16px;
+			  padding: 2px 10px;
+			  font-size: 13px;
+			  -webkit-touch-callout: none;
+			  -webkit-user-select: none;
+			  -khtml-user-select: none;
+			  -moz-user-select: none;
+			  -ms-user-select: none;
+			  user-select: none;
+			}
+
+			pre a:first-of-type::before {
+			  padding-top: 10px;
+			}
+
+			pre a:last-of-type::before {
+			  padding-bottom: 10px;
+			}
+
+			pre a:only-of-type::before {
+			  padding: 10px;
+			}
+
+			.highlight { background-color: #ffffcc } /* RIGHT */
+  .highlight .hll { background-color: #ffffcc }
+  .highlight  { background: #f0f0f0; }
+  .highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+  .highlight .err { border: 1px solid #FF0000 } /* Error */
+  .highlight .k { color: #007020; font-weight: bold } /* Keyword */
+  .highlight .o { color: #666666 } /* Operator */
+  .highlight .ch { color: #60a0b0; font-style: italic } /* Comment.Hashbang */
+  .highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+  .highlight .cp { color: #007020 } /* Comment.Preproc */
+  .highlight .cpf { color: #60a0b0; font-style: italic } /* Comment.PreprocFile */
+  .highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+  .highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+  .highlight .gd { color: #A00000 } /* Generic.Deleted */
+  .highlight .ge { font-style: italic } /* Generic.Emph */
+  .highlight .gr { color: #FF0000 } /* Generic.Error */
+  .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+  .highlight .gi { color: #00A000 } /* Generic.Inserted */
+  .highlight .go { color: #888888 } /* Generic.Output */
+  .highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+  .highlight .gs { font-weight: bold } /* Generic.Strong */
+  .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+  .highlight .gt { color: #0044DD } /* Generic.Traceback */
+  .highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+  .highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+  .highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+  .highlight .kp { color: #007020 } /* Keyword.Pseudo */
+  .highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+  .highlight .kt { color: #902000 } /* Keyword.Type */
+  .highlight .m { color: #40a070 } /* Literal.Number */
+  .highlight .s { color: #4070a0 } /* Literal.String */
+  .highlight .na { color: #4070a0 } /* Name.Attribute */
+  .highlight .nb { color: #007020 } /* Name.Builtin */
+  .highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+  .highlight .no { color: #60add5 } /* Name.Constant */
+  .highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+  .highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+  .highlight .ne { color: #007020 } /* Name.Exception */
+  .highlight .nf { color: #06287e } /* Name.Function */
+  .highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+  .highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+  .highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+  .highlight .nv { color: #bb60d5 } /* Name.Variable */
+  .highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+  .highlight .w { color: #bbbbbb } /* Text.Whitespace */
+  .highlight .mb { color: #40a070 } /* Literal.Number.Bin */
+  .highlight .mf { color: #40a070 } /* Literal.Number.Float */
+  .highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+  .highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+  .highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+  .highlight .sa { color: #4070a0 } /* Literal.String.Affix */
+  .highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+  .highlight .sc { color: #4070a0 } /* Literal.String.Char */
+  .highlight .dl { color: #4070a0 } /* Literal.String.Delimiter */
+  .highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+  .highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+  .highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+  .highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+  .highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+  .highlight .sx { color: #c65d09 } /* Literal.String.Other */
+  .highlight .sr { color: #235388 } /* Literal.String.Regex */
+  .highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+  .highlight .ss { color: #517918 } /* Literal.String.Symbol */
+  .highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+  .highlight .fm { color: #06287e } /* Name.Function.Magic */
+  .highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+  .highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+  .highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+  .highlight .vm { color: #bb60d5 } /* Name.Variable.Magic */
+  .highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+  </head>
+  <body>
+		<div>
+			<div style='width:25%; '>
+					<ul id="tree" class="ztree" style='width:100%;'>
+
+					</ul>
+			</div>
+	        <div id='readme' style='width:70%;margin-left:20%;'>
+	          	<article class='markdown-body'>
+
+<h1 id="toc_0">Baidu DuerOS Auto user guide</h1>
+
+<blockquote>
+<p>All rights reserved, infringement will be investigated</p>
+
+<p>Contact email：dueros_feedback@baidu.com</p>
+</blockquote>
+
+<h1 id="toc_1">Introduction</h1>
+
+<h2 id="toc_2">What is DuerOS auto</h2>
+
+<p>Baidu DuerOS is a conversational artificial intelligence system launched by Baidu, which has more than 70 functions and can support all kinds of hardware equipment. Baidu DuerOS auto is an integrated voice interaction solution using intelligent voice for human-machine interactions, aimed at web-connected cars, and based on Baidu’s voice technology and natural language processing technology and other AI technologies.</p>
+
+<p>Baidu DuerOS Auto has four main functions: voice interaction, telephone, music and navigation. In the course of driving, drivers can use the navigation, music, telephone and other functions through voice command at any time. It can free drivers from the tedious and complex driving program, make the driving safer, more convenient and economical. With the help of many O2O ecosystems connected by Baidu, drivers can also get car services such as parking, refueling and maintenance.</p>
+
+<p>This document is a detailed guide about how to integrate the voice interaction of DuerOS Auto, which elaborates on the implementations of hardware, systems and software, especially the voice interaction integraition for the partners when integrating DuerOS auto from the HU side.</p>
+
+<h2 id="toc_3">How to integrate DuerOS Auto</h2>
+
+<blockquote>
+<p>DuerOS auto does not support personal developers to integrate it temporarily.
+At present, DuerOS auto has already published Andriod system solution and online cloud API service. Other system solutions such as Linux, QNX, IOS haven&#39;t been supported yet.</p>
+</blockquote>
+
+<p>DuerOS auto currently supports open integration by OEM, HU solution provider, chip-makers and carrier operators ( hereinafter referred to as DuerOS partners). The integrating process includes:</p>
+
+<ol>
+<li>Business communication：DuerOS partners contact baidu business(<a href="mailto:iov-hezuo@baidu.com" title="iov-hezuo@baidu.com">iov-hezuo@baidu.com</a>),for the contract signing of NDA</li>
+<li>Release package acquisition：after completing the business process, DuerOS partners can obtain the download address of <a href="#What%20does%20DuerOS%20contain">DuerOS Auto Release package</a>.</li>
+<li>Integratin：once obtained the SDK, users can integrate adaptation according to the documents and their own requirements. After completing the integration, DuerOS partners shall conduct acceptance inspection in accordance with the <a href="#Process%20of%20DuerOS%20tesing%20and%20acceptance">Acceptance documents</a> provided by baidu.</li>
+<li>Baidu acceptance：after the acceptance of DuerOS partners, users should mail pre - production equipment to Baidu, then Baidu conduct acceptance. The equipment which passed Baidu acceptance will be authorized, and obtain issued signatures and certification. Please contact Baidu business for mailing address.</li>
+<li>Mass production release: DuerOS partners are responsible for the release. Baidu can participate in PR and other work appropriately.</li>
+</ol>
+
+<p>In the following cases, please contact baidu business(<a href="mailto:iov-hezuo@baidu.com" title="iov-hezuo@baidu.com">iov-hezuo@baidu.com</a>)for confirmation:</p>
+
+<blockquote>
+<p>1.For front loading plants, which require closer R&amp;D and coupling in order to achieve better results.</p>
+
+<p>2.There is a custom demand.</p>
+</blockquote>
+
+<h2 id="toc_4">What is contained in the release package</h2>
+
+<p><a name="What does DuerOS contain" ></a></p>
+
+<blockquote>
+<p>All the DuerOS partners can get the DuerOS auto release package after signing the NDA agreement with Baidu Business(<a href="mailto:iov-hezuo@baidu.com" title="iov-hezuo@baidu.com">iov-hezuo@baidu.com</a>)</p>
+</blockquote>
+
+<p>DuerOSThe release package mainly contains 3 APKs, 1 SDK, document and sample code.</p>
+
+<h3 id="toc_5">APK directory</h3>
+
+<p>This directory contains 3 APKs:</p>
+
+<ul>
+<li>DuerOS_Auto_*.*.*_Release.apk：core module of voice interaction，which is mandatory for DuerOS operation</li>
+<li>DuerOS_CarRadio_*.*.*_Release.apk：eco-radio of voice content, combined with voice interaction to provide massive voice content, such as songs, operas, broadcasts, etc. </li>
+<li>DuerOS_MapAuto*.*.*_Release.apk：auto Baidu map.</li>
+</ul>
+
+<h3 id="toc_6">SDK directory</h3>
+
+<p>custom-sdk-release-*.*.*.jar: SDK provided by DuerOS，users can communicate with DuerOS through this SDK, to implement various custom function.</p>
+
+<h3 id="toc_7">Doc directory</h3>
+
+<p>This directory mainly contains 3 documentations:</p>
+
+<ul>
+<li>Integrate guide.HTML: contains the frameworks, strategies, API and notes of DuerOS, which is the main references provided to developers.</li>
+<li>Voice instruction set.xlsx: sample instruction set recommended by DuerOS currently.</li>
+<li>Api document: contains all the Class and Interface Declarations.</li>
+</ul>
+
+<h3 id="toc_8">Demo directory</h3>
+
+<p>It is a subbranch of open source code of Baidu Apollo Open Source Project, the catalog contains following open source code:</p>
+
+<ul>
+<li>DuerOS CustomAPP code：mainly contains how to use SDK to develop the user’s own applications to communicate withDuerOS.</li>
+</ul>
+
+<h2 id="toc_9">Recommended software and hardware configuration</h2>
+
+<p>In order for DuerOS to run well on your device, we recommend the device configuration as follows.</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Head Unit Specs</th>
+<th style="text-align: left">Recommended Requirement</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">CPU</td>
+<td style="text-align: left">Cortex A9 dual cores、 1.2GHz</td>
+</tr>
+<tr>
+<td style="text-align: left">RAM</td>
+<td style="text-align: left">2GB</td>
+</tr>
+<tr>
+<td style="text-align: left">NETWORK</td>
+<td style="text-align: left">3G、4G</td>
+</tr>
+<tr>
+<td style="text-align: left">STORAGE</td>
+<td style="text-align: left">8GB</td>
+</tr>
+<tr>
+<td style="text-align: left">TELEPHONE</td>
+<td style="text-align: left">BLUETOOTH 4.0 or beyond</td>
+</tr>
+<tr>
+<td style="text-align: left">Mic Input</td>
+<td style="text-align: left">Support echo cancellation, SNR &gt; 10dB, 16bit, 16KHz, mplitude ∈ (2000、 30000)</td>
+</tr>
+<tr>
+<td style="text-align: left">OS</td>
+<td style="text-align: left">Android 4.1 or beyond</td>
+</tr>
+<tr>
+<td style="text-align: left">GPS</td>
+<td style="text-align: left">GPS、A-GPS</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_10">Overall framework</h2>
+
+<p>DuerOS auto framework mainly contains 3 aspects: hardware platform layer, core layer, third party service and content (such as music, navigation, map and FM application). The main structure as shown in the diagram below:
+<img src="img/DuerOS%20Auto%20technical%20framework.png" alt="DuerOS Auto frame"></p>
+
+<p>The core module is the voice module and the communication module. The voice module obtains the user&#39;s input, interacts with the server to identify and parse the user&#39;s voice, and then send the result of semantic parsing to the instruction module to generate the corresponding instruction, and pass it to the communication module. Through the IPC, the instructions are passed to third party services or contents to be executed, and the feedback of execution results and data will be sent to the communication module and transmitted to the UI layer for display. Voice module as the core module of the client, mainly includes the voice engine management, the custom wake-up words, the custom direct command words, the custom off-line instruction, the third party recording, the echo cancellation and noise suppression, etc. In addition, the client also needs to support statistical event tracking, traffic radio, OTA upgrade, and adjust strategies according to the dynamic configuration of server etc. </p>
+
+<p>The voice engine currently uses Baidu&#39;s own voice recognition engine, with voice acquisition, voice preprocessing, online identification, off-line identification and other functions, and the accuracy of recognition is as high as 97%. The voice broadcast uses Baidu&#39;s own TTS engine, which currently supports the configuration of language speed, tone and volume, supports the TTS broadcast service of standard/emotional voice of male and female, supports the combination of online and off-line. Besides using Baidu&#39;s own voice SDK, the voice module may also consider supporting the demand of the third party voice solutions.</p>
+
+<p>DuerOS auto has been deeply integrated with Baidu automobile map, trying to provide the best voice and navigation interaction experience for users. In terms of UIUE, DuerOS auto adopts user-friendly induced interaction, supports custom UI、NLP interface display and flexible multi-resolution adaptation scheme,etc.</p>
+
+<p>The overall scheme of the DuerOS auto needs to correlate with platform, On the one hand, the SDK, Src Code and Demo should be sent to solution provider、Tier One or OEM for integrated development, as well as voice initialization interface、custom UI 、voice wake-up and configuration of direct command words and other functions. On the other hand, the SDK should be provided to third party services and contents developers for integration. After recognizing and parsing the voice of the user, the core module of the DuerOS generates the command instruction and sends it to third party for processing and execution. At the same time, the third party can also transmit information about execution results and data to the core module through the related interfaces provided by SDK.The overall framework of DuerOS auto core module integrated voice service (voice recognition and semantic parsing), communication module (communication with Custom APP), and the communication between third party services or contents as shown below:
+<img src="img/DuerOS%20Auto%20End-to-end%20frame.png" alt="DuerOS Auto Client frame"></p>
+
+<h1 id="toc_11">Integrate DuerOS Auto</h1>
+
+<p>If you want to communicate with DuerOS through SDK, firstly you need to do the project configuration and initialize the SDK. Once these two steps have completed, you can interact with DuerOS through SDK and and develop the custom function.</p>
+
+<h2 id="toc_12">Project configuration</h2>
+
+<p>Import custom-sdk.jar and gson-2.2.4.jar to CustomApp project.</p>
+
+<p><img src="img/import_sdk.png" alt="DuerOS SDK import"></p>
+
+<p>Refer to CustomAppDemo project，add the following code into AndroidManifest.xml：</p>
+
+<div><pre><code class="language-markup">&lt;uses-permission android:name=&quot;android.permission.RECEIVE_BOOT_COMPLETED&quot;/&gt;
+
+&lt;service android:name=&quot;com.baidu.che.codriversdk.PlatformService&quot;&gt;
+&lt;/service&gt;
+
+&lt;receiver android:name=&quot;com.baidu.che.codriversdk.BootReceiver&quot;&gt;
+    &lt;intent-filter&gt;
+        &lt;action android:name=&quot;android.intent.action.BOOT_COMPLETED&quot;/&gt;
+        &lt;action android:name=&quot;com.baidu.che.codrivercustom.START&quot;/&gt;
+    &lt;/intent-filter&gt;
+&lt;/receiver&gt;</code></pre></div>
+
+<h2 id="toc_13">Initialize the SDK</h2>
+
+<p>Initialize it in the Application class onCreate () function.</p>
+
+<div><pre><code class="language-java">CdConfigManager.getInstance().initialize(getApplicationContext(), new InitListener() {
+    @Override
+    public void onConnectedToRemote() {
+        // Successfully connected to DuerOS：Can call a custom interface
+        // Initializing various modules for function customization here
+        // It is recommended to put all the sdk configuration related things here
+        // Do not repeat the configuration, otherwise it may cause some unknown problems
+    }
+
+    @Override
+    public void onDisconnectedToRemote() {
+        // Disconnected from DuerOS: You can do some cleanup
+    }
+});</code></pre></div>
+
+<h2 id="toc_14">Sleep &amp; Wakeup</h2>
+
+<h3 id="toc_15">Sleep</h3>
+
+<p>The sleep device can call this interface to turn off other related APK and functions, so as to reduce consumption. At this time the voice wakeup function is invalid.</p>
+
+<div><pre><code class="language-java">CdConfigManager.getInstance().notifySystemSleep();</code></pre></div>
+
+<h3 id="toc_16">Wakeup</h3>
+
+<p>The wakeup device can call this interface, open DuerOS wakeup and related functions. At this time the voice wakeup function takes effect.</p>
+
+<div><pre><code class="language-java">CdConfigManager.getInstance().notifySystemWakeUp();</code></pre></div>
+
+<h2 id="toc_17">Voice recognition ASR</h2>
+
+<p>The CdAsrManager class is responsible for managing ASR related functions, and get a singleton via CdAsrManager.getInstance().</p>
+
+<h3 id="toc_18">Add/Delete custom wakeup words</h3>
+
+<p>addWakeUpWord method to set custom wake-up words, example code is as follows：
+<code>java
+CdAsrManager.getInstance().addWakeUpWord(&quot;Hellow Baidu auto&quot;);  //Add custom wakeup words
+CdAsrManager.getInstance().removeWakeUpWord(&quot;Hellow Baidu auto&quot;) //Delete custom wakeup words
+</code>
+You can call the interface multiple times to add multiple wakeup words, but we recommend the wakeup words no more than three, so as to achieve the best wakeup effect.
+<strong>Note: Custom wakeup words have been supported, if needed, please contact Baidu business(<a href="mailto:iov-hezuo@baidu.com" title="iov-hezuo@baidu.com">iov-hezuo@baidu.com</a>)</strong></p>
+
+<h3 id="toc_19">Dialog flow Interface control</h3>
+
+<p>Opening and closing dialog flow can be achieved through CdAsrManager.getInstance().openDialog()and closeDialog().</p>
+
+<div><pre><code class="language-java">CdAsrManager.getInstance().setAsrTool(new CdAsrManager.AsrTool() {
+    @Override
+    public void onVrDialogShow() {
+        LogUtil.d(TAG, &quot;Show dialog flow interface&quot;);
+    }
+
+    @Override
+    public void onVrDialogDismiss() {
+        LogUtil.d(TAG, &quot;Dismiss dialog flow interface&quot;);
+    }
+});</code></pre></div>
+
+<h3 id="toc_20">Register command words</h3>
+
+<p>The dynamic registration of command words is used to customize the commands in the voice dialog flow after wake-up.</p>
+
+<p>The sample code for registering command words is as follows:</p>
+
+<div><pre><code class="language-java">CdAsrManager.VrCommand vrCommand = new CdAsrManager. CdAsrManager.VrCommand() {
+    @Override
+    public void onCommand(String type, String cmd) {
+        LogUtil.e(LOG_TAG, &quot;onCommand(): type=&quot; + type + &quot; cmd=&quot; + cmd);
+    }
+
+    @Override
+    public String getId() {
+        return &quot;vr_cmd_test&quot;;
+    }
+};
+
+vrCommand.addCommand(&quot;run&quot;, &quot;jog&quot;, &quot;sprint&quot;);
+vrCommand.addCommand(&quot;play&quot;, &quot;basketball&quot;, &quot;football&quot;);
+CdAsrManager.getInstance().registerVrCmd(vrCommand);</code></pre></div>
+
+<p>Important note: When the custom command words and built-in command words conflict, the custom logic will take precedence.</p>
+
+<p>Examples of unregistered (cancel) command words are as follows:</p>
+
+<div><pre><code class="language-java">CdAsrManager.getInstance().unRegisterVrCmd(&quot;vr_cmd_test&quot;);</code></pre></div>
+
+<h3 id="toc_21">Other API Descriptions</h3>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">API</th>
+<th style="text-align: left">description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">disableAsr</td>
+<td style="text-align: left">Close voice function（Turn off wakeup, release MIC）</td>
+</tr>
+<tr>
+<td style="text-align: left">enableAsr</td>
+<td style="text-align: left">Open voice function（wake up, use MIC）</td>
+</tr>
+<tr>
+<td style="text-align: left">openFullBargin</td>
+<td style="text-align: left">Open barge in function</td>
+</tr>
+<tr>
+<td style="text-align: left">closeFullBargin</td>
+<td style="text-align: left">Close barge in function</td>
+</tr>
+<tr>
+<td style="text-align: left">openSceneCmd</td>
+<td style="text-align: left">Open direct command words</td>
+</tr>
+<tr>
+<td style="text-align: left">closeSceneCmd</td>
+<td style="text-align: left">Close direct command words</td>
+</tr>
+<tr>
+<td style="text-align: left">openOneShot</td>
+<td style="text-align: left">Open oneShot(Temporarily unavailable)</td>
+</tr>
+<tr>
+<td style="text-align: left">closeOneShot</td>
+<td style="text-align: left">Close oneShot(Temporarily unavailable)</td>
+</tr>
+</tbody>
+</table>
+
+<p>Explanation: oneshot: The user can finish the wake-up words and instructions together, without waiting for wake-up, and then give the instructions; for example: &quot;Xiao Du Xiao Du open the navigation&quot;.</p>
+
+<h2 id="toc_22">speech synthesis TTS</h2>
+
+<p>com.baidu.che.codriversdk.manager.CdTTSPlayerManager is the class object which controls TTS，TTS broadcast can be used once the singleton has been obtained. The detailed API description is as follows：</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Key API</th>
+<th style="text-align: left">description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">play(String text)</td>
+<td style="text-align: left">Play synthetic speech</td>
+</tr>
+<tr>
+<td style="text-align: left">playWithUtteranceId(String text, String utteranceId)</td>
+<td style="text-align: left">Play synthetic speech，corresponding identification ID with text</td>
+</tr>
+<tr>
+<td style="text-align: left">playAndShow(String text, PlayAndShowListener listener)</td>
+<td style="text-align: left">Play synthetic speech and show it, with callback after playing is finished</td>
+</tr>
+<tr>
+<td style="text-align: left">playAndShow(String text)</td>
+<td style="text-align: left">Play synthetic speech and show it</td>
+</tr>
+<tr>
+<td style="text-align: left">setTTSPlayerListener(TTSPlayerListener listener)</td>
+<td style="text-align: left">Set all listeners of TTS broadcasts</td>
+</tr>
+<tr>
+<td style="text-align: left">setTTSPlayStatusListener(TTSPlayStatusListener listener)</td>
+<td style="text-align: left">Set the listeners who currently broadcast the TTS via the “play” or “playWithUtteranceId” interface</td>
+</tr>
+<tr>
+<td style="text-align: left">stop()</td>
+<td style="text-align: left">Stop playing</td>
+</tr>
+<tr>
+<td style="text-align: left">switchSpeak(SpeechType type)</td>
+<td style="text-align: left">Set speech type，see the following table for specific speech type</td>
+</tr>
+<tr>
+<td style="text-align: left">setAudioStreamType(int mType)</td>
+<td style="text-align: left">Set StreamType of TTS</td>
+</tr>
+</tbody>
+</table>
+
+<p>Speech type supported by DuerOS currently</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Types</th>
+<th style="text-align: left">Enum-type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">Standard male voice</td>
+<td style="text-align: left">NORMAL_MALE</td>
+</tr>
+<tr>
+<td style="text-align: left">Standard female voice</td>
+<td style="text-align: left">NORMAL_FEMALE</td>
+</tr>
+<tr>
+<td style="text-align: left">Emotional male voice</td>
+<td style="text-align: left">EMOTION_MALE</td>
+</tr>
+<tr>
+<td style="text-align: left">Emotional female voice</td>
+<td style="text-align: left">EMOTION_FEMALE</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_23">Navigation function</h2>
+
+<h3 id="toc_24">Initiate navigation according to POI point information</h3>
+
+<div><pre><code class="language-java">PoiModel mPoiModel = new PoiModel();
+mPoiModel.latitude = 22.524674; // Required
+mPoiModel.longitude = 113.943024; // Required
+mPoiModel.poiName = &quot;Baidu International Building, Shenzhen&quot;; // Optional
+mPoiModel.poiAddress = &quot;Baidu International Building, Nanshan District Xuefu Road East, Shenzhen&quot; // Optional
+boolean isSendSuccess = CdNaviManager.getInstance().sendStartNaviCommand(PoiModel mPoi);</code></pre></div>
+
+<h3 id="toc_25">Set default navigation app</h3>
+
+<div><pre><code class="language-java">//Currently available maps are:
+  Baidu maps:   CdNaviManager.NaviApp.Baidu
+  AMAP map Head unit:   CdNaviManager.NaviApp.Amap
+  AMAP map in Back Mirror :  CdNaviManager.NaviApp.Amap_Lite
+  
+CdNaviManager.getInstance().setDefaultNaviApp(CdNaviManager.NaviApp.Baidu);</code></pre></div>
+
+<h4 id="toc_26">Get map navigation status</h4>
+
+<div><pre><code class="language-java">CdNaviManager.getInstance().setNaviTool(new CdNaviManager.NaviTool() {
+            @Override
+            public void isMapInUse(NaviStatus status) {
+                //Callback enumeration values of map navigation status. NaviStatus:status
+            }
+        });
+        
+public enum NaviStatus implements INoProguard {
+        /**
+         * Enter navigation
+         */
+        Navi_Front,
+        /**
+         * Exit navigation
+         */
+        Navi_Background,
+        /**
+         * Enter the map
+         */
+        Navi_App_Launcher,
+        /**
+         * Exit the map
+         */
+        Navi_App_Exit,
+        /**
+         * Start navigation
+         */
+        Navi_Start,
+        /**
+         * Exit navigation
+         */
+        Navi_EXIT,
+        /**
+         * Start cruise
+         */
+        Cruise_Start,
+        /**
+         * End cruise
+         */
+        Cruise_End;
+}</code></pre></div>
+
+<h4 id="toc_27">Set day / night mode of the map</h4>
+
+<div><pre><code class="language-java">//true :day  false :night
+CdNaviManager.getInstance().setDayOrNightMode(true);</code></pre></div>
+
+<h4 id="toc_28">Try to trigger or cancel night mode of the map</h4>
+
+<p>Note: It only takes effect when the map is in automatic mode (if the map has been enforced to set the day/night mode, none of the following methods will take effect)
+<code>
+//true:  trigger night mode  false:  cancel night mode
+CdNaviManager.getInstance().triggerNightMode(true);
+</code></p>
+
+<h4 id="toc_29">Judge if the map is in navigation</h4>
+
+<div><pre><code class="language-java">CdNaviManager.getInstance().isInNavi(new CdNaviManager.IsNaviCallback() {
+                    @Override
+                    public void isInNavi(boolean isNavi) {
+                        ToastUtils.show(isNavi ? &quot;navigating&quot; : &quot;not navigating&quot;);
+                    }
+                });</code></pre></div>
+
+<h4 id="toc_30">Set the address of home/office</h4>
+
+<div><pre><code class="language-java">CdNaviManager.PoiAddress address = new CdNaviManager.PoiAddress();
+                address.name = &quot;xx&quot;;
+                //CdNaviManager.AddressType.office.name() as office
+                address.type = CdNaviManager.AddressType.home.name();
+                address.address = &quot;xx&quot;;
+                address.longitude = xx;
+                address.latitude = xx;
+                CdNaviManager.getInstance().setAppointAddress(address);</code></pre></div>
+
+<h4 id="toc_31">Get the address of home/office</h4>
+
+<div><pre><code class="language-none">//CdNaviManager.AddressType.office / home
+CdNaviManager.getInstance().getAppointAddress(CdNaviManager.AddressType.home,
+                  new CdNaviManager.AddressCallback() {
+                       @Override
+                       public void onResultAddress(CdNaviManager.PoiAddress address){
+                            ToastUtils.show(&quot;Home address = &quot; + address.name);
+                       }
+                  });</code></pre></div>
+
+<h4 id="toc_32">Navigate home/office</h4>
+
+<div><pre><code class="language-none">//CdNaviManager.AddressType.office / home
+CdNaviManager.getInstance().sendStartNaviHomeOrAddress(CdNaviManager.AddressType.home);</code></pre></div>
+
+<h2 id="toc_33">Integrate Bluetooth phone</h2>
+
+<h3 id="toc_34">Set BlueTooth function</h3>
+
+<p>Use CdBlueToothManager.getInstance().setBlueToothTool(BlueToothTool tool) to set a Bluetooth tool instance，to open system Bluetooth page, then use this instance to download contacts and achieve other functions，The sample code is as follows:</p>
+
+<div><pre><code class="language-java">/**
+ * Set BlueTooth Tool
+ */
+CdBlueToothManager.getInstance().setBlueToothTool(new CdBlueToothManager.BlueToothTool() {
+    @Override
+    public void openBlueToothView() {
+        LogUtil.d(TAG, &quot;Open the Bluetooth connection interface&quot;);
+        // TODO: Open the Bluetooth connection interface
+    }
+
+    @Override
+    public void openContractDownloadView() {
+        LogUtil.d(TAG，&quot;Open the phone book download interface&quot;);
+        // TODO: Open the phone book download interface
+    }
+});</code></pre></div>
+
+<h3 id="toc_35">BlueToothTool API description</h3>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">API</th>
+<th style="text-align: left">description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">openBlueToothView()</td>
+<td style="text-align: left">Phone someone in voice，DuerOS call When the status is Not Connected to Bluetooth，aim to open Bluetooth page，and OEMs need to override the implementation method inside.</td>
+</tr>
+<tr>
+<td style="text-align: left">openContractDownloadView()</td>
+<td style="text-align: left">Phone someone in voice，DuerOS call when the status is Connected to Bluetooth but without contacts，aim to open the contacts page，OEMs need to override the implementation method inside.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_36">Set phone function</h3>
+
+<p>Use a new PhoneTool instance of CdPhoneManager.getInstance().setPhoneTool(PhoneTool tool) to make phone calls，then it can be called here when dialing.The sample code is as follows:</p>
+
+<div><pre><code class="language-java">CdPhoneManager.getInstance().setPhoneTool(new CdPhoneManager.PhoneTool() {
+    @Override
+    public void dialNum(String number) {
+        LogUtil.d(TAG, &quot;dial：&quot; + number);
+        // TODO: dial
+    }
+});</code></pre></div>
+
+<h3 id="toc_37">Bluetooth phone status synchronization</h3>
+
+<p>Because Head unit systems of different OEMs are different, the interfaces for obtaining the Bluetooth status are different. Executing example code can notify the connection status of Bluetooth to the DuerOS voice module.
+<code>java
+//Sample codes:
+CdBlueToothManager.getInstance().onNotifyBTStatus(BtStatus status)</code>
+CdBlueToothManager.BtStatus define the following Bluetooth status：</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Macro</th>
+<th style="text-align: center">Parameter values(status)</th>
+<th style="text-align: left">Remark</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">BT_DISCONNECTED</td>
+<td style="text-align: center">0</td>
+<td style="text-align: left">Disconnect</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_CONNECTING</td>
+<td style="text-align: center">1</td>
+<td style="text-align: left">Connecting</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_CONNECTED</td>
+<td style="text-align: center">2</td>
+<td style="text-align: left">Connected</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_DISCONNECTING</td>
+<td style="text-align: center">3</td>
+<td style="text-align: left">Disconnecting</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_CANCELLING</td>
+<td style="text-align: center">4</td>
+<td style="text-align: left">cancellinng</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_CANCELLED</td>
+<td style="text-align: center">5</td>
+<td style="text-align: left">cancelled</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_PAIRED</td>
+<td style="text-align: center">6</td>
+<td style="text-align: left">Paired</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_NOPAIR</td>
+<td style="text-align: center">7</td>
+<td style="text-align: left">Nopair</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_38">Notify phone book about authorization status</h3>
+
+<div><pre><code class="language-none">//sample codes:
+CdBlueToothManager.getInstance().onNotifyBTPhoneStatus(BTPhoneStatus status)
+</code></pre></div>
+
+<p>Execute sample codes,Can notify DuerOS voice module about phone book authorization status，CdBlueToothManager.BTPhoneStatus defines the following phone book authorization status：</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Macro</th>
+<th style="text-align: center">Parameter values(status)</th>
+<th style="text-align: left">Remark</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">BT_PHONE_NO_AUTHORIZED</td>
+<td style="text-align: center">0</td>
+<td style="text-align: left">No authorized</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_PHONE_AUTHORIZING</td>
+<td style="text-align: center">1</td>
+<td style="text-align: left">Authorizing</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_PHONE_AUTHORIZED</td>
+<td style="text-align: center">2</td>
+<td style="text-align: left">Authorized</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_PHONE_REQUESTING</td>
+<td style="text-align: center">3</td>
+<td style="text-align: left">Requesting</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_PHONE_RESERVED_1</td>
+<td style="text-align: center">4</td>
+<td style="text-align: left">Reserved text</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_PHONE_RESERVED_2</td>
+<td style="text-align: center">5</td>
+<td style="text-align: left">reserved text</td>
+</tr>
+<tr>
+<td style="text-align: left">BT_PHONE_CANNOT_AUTHORIZED</td>
+<td style="text-align: center">6</td>
+<td style="text-align: left">cannot be authorized</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_39">Notify phone book download status</h3>
+
+<div><pre><code class="language-none">//sample codes:
+CdPhoneManager.getInstance().onNotifyPhoneStatus(PhoneDownload Status  status)```
+CdPhoneManager.PhoneDownloadStatus defines the following phone book download status：
+
+| Macro | Parameter values(status) | Remark|
+| :-- | :-------------: | :--- |
+| CONTACTS\_NO_DOWNLOADED | 0 | Default status |
+| ACTION\_PBAP\_DOWNLOAD_SUPPORT | 1 | Successful integrate to the configuration file |
+| CONTACTS\_DOWNLOAD_REQUEST | 2 | Contacts download request |
+| CONTACTS\_DOWNLOAD_STARTED | 3 | Contacts download start |
+| CONTACTS\_DOWNLOAD_PROGRESS | 4 | Contacts download progressing|
+| CONTACTS\_DOWNLOAD_COMPLETE | 5 | Contacts download completed |
+| CONTACTS\_UPDATE_READY | 6 | Contacts ready to update |
+| CONTACTS\_UPDATE_COMPLETE | 7| Contacts update completed |
+| CALLLOGS\_DOWNLOAD_STARTED | 8 | Call logs download start |
+| CALLLOGS\_DOWNLOAD_PROGRESS | 9 | Call logs download progressing |
+| CALLLOGS\_DOWNLOAD_COMPLETE | 10 | Call logs download completed |
+| OTHER | 11 | Others |
+
+### Synchronize phone contact List data
+
+```java
+//Initialize the Model
+CdPhoneManager.PhoneContactList mPhoneModel = new CdPhoneManager.PhoneContactList();
+//Add names and phone numbers of every contacts
+//@note contacts with more than one phone number are regarded as different contacts.
+mPhoneModel.addContact(&quot;San Zhang&quot;, &quot;13888888888&quot;);
+mPhoneModel.addContact(&quot;San Zhang&quot;, &quot;13899999999&quot;);
+mPhoneModel.addContact(&quot;Si Li&quot;, &quot;13800000000&quot;);
+//transfer data after setting is completed：
+CdPhoneManager.getInstance().sendPhoneBookData(mPhoneModel);</code></pre></div>
+
+<h2 id="toc_40">Integrate Multimedia function</h2>
+
+<p>To implement the commands of “open radio、open FM、open AM、open USB music、open CD music、open AUX music、open Ipod music、open Bluetooth music...” ,DuerOS provides a unified interface<code>setMediaTool</code> for SDK developers to use, fitting the multimedia interfaces provided by each Head unit system.</p>
+
+<p>CdMediaManager.getInstance().setMediaTool(MediaTool tool) can be used to set multimedia tool instance, By implementing each interface in this instance，the functions of“open radio、open FM、open AM、open USB music、open CD music、open AUX music、open Ipod music、open Bluetooth music...” can be achieved.</p>
+
+<div><pre><code class="language-java">//Sample codes：
+CdMediaManager.getInstance().setMediaTool(new MediaTool() {
+    @Override
+    public void openRadio() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void closeRadio() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void openMyMusic() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void openMusicUsb() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void openMusicIpod() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void openMusicCd() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void openMusicBt() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void openMusicAux() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void openFMChannel(String arg0) {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void openFM() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void openAMChannel(String arg0) {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void openAM() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void playCollectionFM() {
+       // TODO Auto-generated method stub
+    }
+    @Override
+    public void collectFMChannel() {
+       // TODO Auto-generated method stub
+    }
+    @Override
+    public void cancelFMChannel() {
+       // TODO Auto-generated method stub
+    }
+    @Override
+    public void searchAndRefreshFMChannel() {
+       // TODO Auto-generated method stub
+    }
+});</code></pre></div>
+
+<h2 id="toc_41">Integrate music function</h2>
+
+<p>For the music demand, DuerOS fits three music players：</p>
+
+<p>1.Baidu Car Radio: Provided by baidu, contains a large number of legal copy music resources.</p>
+
+<p>2.Kuwo music player:Baidu cooperates with Kuwo music and contains a lot of Kuwo music resources</p>
+
+<p>3.The OEMs&#39; own player: if the OEMs has its own music resources, it can be directly adapted by DuerOS to reach the effect of voice-activated player.</p>
+
+<blockquote>
+<p>Due to digital copyright issues, please consult Baidu iov business:iov-hezuo@baidu.com for official mass production of music resources.</p>
+</blockquote>
+
+<h3 id="toc_42">Default music player settings</h3>
+
+<p>OEMs can select the default player interface through the following interface</p>
+
+<div><pre><code class="language-java">CdConfigManager.getInstance().setMusicType(MusicType musicType);</code></pre></div>
+
+<p>MusicType：</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Enum-type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">Custom player</td>
+<td style="text-align: left">CUSTOM_MUSIC</td>
+</tr>
+<tr>
+<td style="text-align: left">Baidu Car Radio</td>
+<td style="text-align: left">BAIDU_RADIO</td>
+</tr>
+<tr>
+<td style="text-align: left">QQ music</td>
+<td style="text-align: left">QQ_MUSIC</td>
+</tr>
+<tr>
+<td style="text-align: left">Kuwo music</td>
+<td style="text-align: left">KUWO_MUSIC</td>
+</tr>
+</tbody>
+</table>
+
+<p>For the OEMs&#39; own player，CdMusicManager.getInstance().setMusicTool(MusicTool tool) should be used to set the music tool instance,so that to control the this player, the sample code is as follows：</p>
+
+<div><pre><code class="language-java">CdMusicManager.getInstance().setMusicTool(new MusicTool() {
+    @Override
+    public void searchMusic(String arg0, String arg1,
+        OnSearchResultListener arg2) {
+        //If do not callback OnSearchResultListener, it will still use Baidu Car Radio to deal with this search results. 
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void playMusic(MusicModel arg0) {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void playList(List&lt;MusicModel&gt; arg0, int arg1) {
+        // TODO Auto-generated method stub
+    }
+});</code></pre></div>
+
+<h3 id="toc_43">Default music player startup settings</h3>
+
+<p>Notify DuerOS whether to launch the playing music player to the foreground when control music(pause, next, previous) next time.（Defaults do not launch the music player）</p>
+
+<div><pre><code class="language-java">// true  Launch    false  Not launch
+// Note: This interface takes effect after being called once and it does not need to be called repeatedly.
+CdPlayerManager.getInstance().notifyNeedLaunchApp(boolean needLaunch)</code></pre></div>
+
+<h2 id="toc_44">Integrate Player function</h2>
+
+<p>The OEMs can set the player tool through CdPlayerManager.getInstance().setPlayerTool(PlayerTool tool)，By implementing each interface of this instance, functions such as switching playing mode, switching the previous song, switching the next song, playing, pausing, and exiting can be realized.These functions are <strong>common behavior</strong>. Taking pause as an example, it may be pause playing music, or it may be pause playing FM, AM and so on. The sample code is as follows</p>
+
+<div><pre><code class="language-java">CdPlayerManager.getInstance().setPlayerTool(new PlayerTool() {
+    @Override
+    public void switchMode(int mode) {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void prev() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void play() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void pause() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void next() {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void exit() {
+        // TODO Auto-generated method stub
+    }
+});</code></pre></div>
+
+<p>Among them swithMode(int mode) supports three modes，in PlayerTool：</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Macro</th>
+<th style="text-align: left">Parameter values</th>
+<th style="text-align: left">Comments</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">PlayerTool.MODE_SINGLE_LOOP</td>
+<td style="text-align: left">0</td>
+<td style="text-align: left">single loop</td>
+</tr>
+<tr>
+<td style="text-align: left">PlayerTool.MODE_RANDOM</td>
+<td style="text-align: left">1</td>
+<td style="text-align: left">random play</td>
+</tr>
+<tr>
+<td style="text-align: left">PlayerTool.MODE_FULL_LOOP</td>
+<td style="text-align: left">2</td>
+<td style="text-align: left">full loop</td>
+</tr>
+</tbody>
+</table>
+
+<p>Description: music search (such as waking up Xiao Du, &quot;I want to listen to Andy Lau&#39;s ice rain&quot;), the results will be played by the default player（call setMusictype()). But control command（such as &quot;next，previous, pause...&quot;），will launch the recently used player to execute the command.</p>
+
+<h2 id="toc_45">Manually control the player</h2>
+
+<p>In addition to playing the music by voice control through PlayTools interface,the player with sdk can also be controlled manually, to achieve functions such as previous song, next song, pause, play, exit, loop mode and change songs.
+```java
+CdPlayerManager.getInstance().play();// play
+CdPlayerManager.getInstance().pause();// play
+CdPlayerManager.getInstance().stop();// play
+CdPlayerManager.getInstance().next();// play
+CdPlayerManager.getInstance().prev();// play
+CdPlayerManager.getInstance().change();// play
+CdPlayerManager.getInstance().switchMode(int mode);// play</p>
+
+<div><pre><code class="language-none">
+###Notify DuerOS the type of player currently being played
+```java
+public void notifyInUse(CdConfigManager.MusicType musicType)</code></pre></div>
+
+<p>Description：
+    The local player cancall this interface and set the value of musicType to be MusicType.CUSTOM_MUSIC, to notify the duerOS to send the commands of player control  to the local player.</p>
+
+<h2 id="toc_46">Integrate System Control Function</h2>
+
+<h3 id="toc_47">Integrate vehicle control function</h3>
+
+<p>OEMs can set system tools through CdSystemManager.getInstance().setSystemTool(SystemTool tool) to switch air conditioners, adjust temperature, switch windows, and adjust system volume. Sample code is as follows:</p>
+
+<div><pre><code class="language-java">CdSystemManager.getInstance().setSystemTool(new SystemTool() {
+    @Override
+    public boolean reduceFeature(String feature, String value) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+    @Override
+    public boolean operateFeature(String feature, String value) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+    @Override
+    public boolean openFeature(String feature, String value) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+    @Override
+    public boolean minFeature(String feature, String value) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+    @Override
+    public boolean maxFeature(String feature, String value) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+    @Override
+    public boolean increaseFeature(String feature, String value) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+    @Override
+    public boolean closeFeature(String feature, String value) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+    @Override
+    public boolean searchFeature(String feature, String value) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+});</code></pre></div>
+
+<p>Description：</p>
+
+<ul>
+<li>Return value：True indicates that the command was successfully executed and the DuerOS dialog flow will be automatically closed; False indicates that the command is not processed.</li>
+<li>If nothing has been done, DuesOS will prompt &quot;command timeout&quot; and exit voice dialog flow after 3s timeout.</li>
+</ul>
+
+<p>The Feature constant is defined as follows:</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Constant Names</th>
+<th style="text-align: left">Constant Values</th>
+<th style="text-align: left">Supported methods</th>
+<th style="text-align: left">Remark</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">FEATURE_VOLUME</td>
+<td style="text-align: left">volume</td>
+<td style="text-align: left">increase/reduce</td>
+<td style="text-align: left">Increase/reduce volume</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_BLUETOOTH</td>
+<td style="text-align: left">bluetooth</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">open/close bluetooth</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE<em>VEHICLE</em>LIGHT</td>
+<td style="text-align: left">vehicle_light</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">open/close vehicle lights</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_LIGHT</td>
+<td style="text-align: left">light</td>
+<td style="text-align: left">oprate(up/down/max/min)</td>
+<td style="text-align: left">Adjust screen light</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_WIFI</td>
+<td style="text-align: left">wifi</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">open/close WIFI</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_NETWORK</td>
+<td style="text-align: left">network</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">open/close network</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_SETTING</td>
+<td style="text-align: left">system_setting</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">open/close setting</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_PICTURE</td>
+<td style="text-align: left">picture</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">open/close pictures</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE<em>NETWORK</em>SHARING</td>
+<td style="text-align: left">network_sharing</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">wifi sharing</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_WIND_FLOW</td>
+<td style="text-align: left">wind_flow</td>
+<td style="text-align: left">operate(up/down/high/low/normal)</td>
+<td style="text-align: left">Adjust the air volume</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_WIND_DIRECTION</td>
+<td style="text-align: left">wind_direction</td>
+<td style="text-align: left">operate(next)</td>
+<td style="text-align: left">next wind direction</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_TEMP</td>
+<td style="text-align: left">temp</td>
+<td style="text-align: left">operate(max/min/up/down/cold/hot)</td>
+<td style="text-align: left">Adjust the air conditioning temperature</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_CLIMATE</td>
+<td style="text-align: left">climate</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">climate system</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE<em>AIR</em>SYNC</td>
+<td style="text-align: left">air_sync</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">synchronous mode</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE<em>VEHICLE</em>DOOR</td>
+<td style="text-align: left">vehicle_door</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">vehicle door</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE<em>VEHICLE</em>BOX</td>
+<td style="text-align: left">veicle_box</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">veicle box</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_AIR_CONDITIONER</td>
+<td style="text-align: left">air_conditioner</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">airconditioner</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_INTERNAL_RECYCLE</td>
+<td style="text-align: left">internal_recycle</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">internal recycle</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_AIR_CLEAN</td>
+<td style="text-align: left">air_clean</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">air clean system</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_DEFROST</td>
+<td style="text-align: left">defrost</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">defrost</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE<em>AUTO</em>DEFROST</td>
+<td style="text-align: left">auto_defrost</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">auto-defrost</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_MUTE</td>
+<td style="text-align: left">mute</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">open/close mute</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE<em>SET</em>HEAT</td>
+<td style="text-align: left">heat</td>
+<td style="text-align: left">open/close</td>
+<td style="text-align: left">heat seat</td>
+</tr>
+<tr>
+<td style="text-align: left">FEATURE_HELP</td>
+<td style="text-align: left">help</td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">help</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_48">Integrate driving recorder control function</h3>
+
+<p>OEMs can implement the corresponding function through the following sample code</p>
+
+<div><pre><code class="language-none">CdCameraManager.getInstance().setCameraTool(new CdCameraManager.DrivingRecorderTool() {
+    @Override
+    public void drivingRecorder(DrivingRecorderState drivingRecorderState) {
+        //drivingRecorderState == DrivingRecorderState.WATCH watch recording    
+        //DrivingRecorderState.START start recording
+        //DrivingRecorderState.STOP  stop recording
+    }
+
+    @Override
+    public void openCamera(CameraType cameraType) {
+        //open camera
+        //cameraType == CameraType.FRONT_CAMERA front camera
+        //CameraType.INNER_CAMERA inner camera
+        //CameraType.BACK_CAMERA back camera
+    }
+
+    @Override
+    public void takePicture() {
+        //take picture
+    }
+});
+</code></pre></div>
+
+<p>1) Sdk send car related information to DuerOS. The sample code is as follows:
+<code>
+CdSystemManager.getInstance().setCarStateListener
+(new CdSystemManager.CarStateListener() {
+                    @Override
+                    public void carStateCmd(String feature, String extra) {
+                        //OEMs returns the corresponding value according to the feature
+                        // data format is as follows: 
+                        { code: AIR_TEMPERATURE,
+                          ext: {
+                                ext1: value1
+                                ext2: value2
+                                }
+                        }
+                        CdSystemManager.getInstance().sendCarInfo(data);
+                    }
+                });
+</code>
+Feature constants are defined as follows:
+CarState.AIR<em>TEMPERATURE air temperature
+CarState.FUEL</em>OIL  fuel amount</p>
+
+<p>2) Sdk sends the specific car model to DuerOS, sample code is as follows:
+<code>
+CdSystemManager.getInstance().sendCarModel(&quot;Porsche 911&quot;);
+</code></p>
+
+<h3 id="toc_49">Integrate electronic manual function (Note: Currently only FAW channels are available)</h3>
+
+<p>1) Set the electronic manual to monitor, the code is as follows:
+<code>
+CdCarInfoQueryManager.getInstance().setQueryCarInfoTool(new CdCarInfoQueryManager.QueryCarInfoTool() {
+                    @Override
+                    public boolean answerContent(String feature, String extra) {
+                        // The returned content is the feature, extra field temporarily not effective
+                        return true;
+                    }
+                });
+</code></p>
+
+<h3 id="toc_50">interface jump</h3>
+
+<p>Jump to voice setting interface</p>
+
+<div><pre><code class="language-java">CdSystemManager.getInstance().jumpToAsrSetting();</code></pre></div>
+
+<p>Jump to help setting interface</p>
+
+<div><pre><code class="language-java">CdSystemManager.getInstance().jumpToHelpSetting();</code></pre></div>
+
+<h2 id="toc_51">Integrate online update function</h2>
+
+<h3 id="toc_52">Introduction of online update function</h3>
+
+<p>The online update module realizes the overall upgrade of all apps in the DuerOS ecosystem through a single download and silent installation. The main process is as follows:</p>
+
+<p>1) Detecting and upgrading the configuration: It has two modes: manual detection by the user and automatic detection by the system. Automatic detection is performed after starting up DuerOS for 30 seconds.</p>
+
+<p>2) Download upgrade packages: Download all applications that need to be upgraded in the DuerOS ecosystem as a form of zip；</p>
+
+<p>3) Silent installation: After the upgrade package is downloaded, DueerOS sends a broadcast, then the Head unit system receives the broadcast and completes the mass silent installation of the apk file under the designated directory.</p>
+
+<h3 id="toc_53">Functions that need to be developed by Head unit system</h3>
+
+<p>1）Receive online upgrade broadcasts sent by DueerOS, broadcast Intent as follows：</p>
+
+<div><pre><code class="language-java">Intent intent = new Intent();
+intent.setAction(&quot;codriver.intent.action.SYSTEM_RESTART&quot;);
+intent.putExtra(&quot;dueros_ota_dir&quot;, otaCacheDir);</code></pre></div>
+
+<p>2）Obtain storage directory of the online upgrade installation package through the dueros<em>ota</em>dir parameter of the online upgrade broadcast intent, and silent install all the apk files under the directory.；</p>
+
+<p>3）After successful installation, delete all apk files under the online upgrade installation package storage directory and restart Head unit system.</p>
+
+<h2 id="toc_54">Obtain weather information</h2>
+
+<p>can actively retrieve weather information by sending broadcasts.
+<code>java
+context.sendBroadcast(new Intent(&quot;com.hkmc.intent.action.request_weather_update&quot;));
+</code>
+Dueros will send a broadcast containing weather information after receiving the broadcast, registering the following broadcast receivers:
+<code>java
+IntentFilter intentFilter =
+new IntentFilter(&quot;com.hkmc.intent.action.weather_update&quot;);
+context.registerReceiver(mReceiver, intentFilter);
+</code>
+In the broadcast receiver onReceive&#39;s Intent, via &quot;com.hkmc.extras.weather.weather<em>condition&quot; and
+&quot;com.hkmc.extras.weather.weather</em>name&quot; can obrain the weather type and the weather name respectively.</p>
+
+<p>In addition, Dueros will update the weather through this broadcast receiver at set intervals.</p>
+
+<h1 id="toc_55">DuerOS FAQ</h1>
+
+<h2 id="toc_56">Logic problems when playing music</h2>
+
+<h3 id="toc_57">Control command execution logic (open music, previous song, next song...)</h3>
+
+<h4 id="toc_58">Reproduce Steps：</h4>
+
+<p>1.Set Baidu Car Radio as the default player, open Baidu Car Radio and Kuwo player, pausing them and place them in the background( (Baidu Car Radio pauses first and Kuwo player pauses after Baidu).
+2.After saying command such as &quot;next song, previous song&quot;,  the system opens Kuwo player to play the next song instead of opening the default player.</p>
+
+<h4 id="toc_59">Logic description：</h4>
+
+<p>In order to maintain the consistency and fluency of the users&#39; music experience, the commands of&quot; previous song, next song, pause...&quot; will be sent to the recently opened player to execute. In the above description of the problem,  Kuwo player is the most recently used player, so Kuwo will execute the commands.</p>
+
+<h3 id="toc_60">Search music execution logic (I want to listen to XXX&#39;s XXX)</h3>
+
+<h4 id="toc_61">Reproduce Steps：</h4>
+
+<p>1.Set Baidu Car Radio as the default player，open Kuwo player.
+2.Give commands &quot;I want to listen to Andy Lau&#39;s ice rain&quot;.
+3.Open Baidu Car Radio to play Andy Lau&#39;s Ice Rain，and Kuwo player pause instead of playing.</p>
+
+<h4 id="toc_62">Logic description：</h4>
+
+<p>Searching commands like &quot; I want to listen to XXX&#39;s XXX &quot; will be sent to the default player to execute. If you want to use Kuwo player to play, you can use:
+<code>java
+CdConfigManager.getInstance().setMusicType(MusicType.KUWO_MUSIC)
+</code>
+to set Kuwo player as the default player.There are four enum-type of music types that can be set：MusicType.CUSTOM<em>MUSIC、MusicType.KUWO</em>MUSIC、MusicType.BAIDU<em>RADIO、MusicType.QQ</em>MUSIC.</p>
+
+<h1 id="toc_63">Core function command</h1>
+
+<p>See details in<a href="#What%20does%20DuerOS%20contain">Baidu DuerOS auto voice instruction set.xlsx</a></p>
+
+<h1 id="toc_64">Launcher Open Source Project</h1>
+
+<h2 id="toc_65">Source code github address</h2>
+
+<p><a href="http://github.com/ApolloAuto/apollo-DuerOS/tree/master/DuerOS-Launcher">Launcher source code</a></p>
+
+<h2 id="toc_66">Launcher description of Project directory structure</h2>
+
+<ul>
+<li>app-</li>
+<li>headunit-open：launcher Head unit main module</li>
+<li>app-mirror-open：launcher Back Mirror main module</li>
+<li>core：launcher common libraries</li>
+<li>map-sdk：used for sdk encapsulation</li>
+<li>build-app-headunit-open.sh：build script of Head unit launcher</li>
+<li>build-app-mirror-open.sh：build script of Back Mirror launcher</li>
+<li>output：used to store the apk files generated by above build script </li>
+</ul>
+
+<h2 id="toc_67">Launcher Project Framework</h2>
+
+<p>DuerOS Launcher Open source project based on  R&amp;D of Android Studio，Use gradle as automated build tools, including 4 modules，core and map-sdk belong to library type，while app-mirror-open and app-headunit-open belong to application type. The dependency relationships of each module are shown below</p>
+
+<p><img src="img/launcher_arch_en.png" alt="Launcher framework"></p>
+
+<p>Specific introduction is as follows: </p>
+
+<ol>
+<li>core:is the core Library of launcher，The main role is to integrate DuerOS SDK， encapsulate base class library required by launcher，Including screen adaptation, network library (based on OKHttp3), picture library (Fresco), Log tools and other functions.</li>
+<li>map-sdk: The main role is to independently encapsulate the positioning sdk for Head unit launcher to use.</li>
+<li>app-headunit-open: The main module of Head unit launcher. It is used to implement the interaction of Head unit launcher UI.</li>
+<li>app-mirror-open: The main module of Back Mirror launcher. It is used to implement the interaction of Back Mirror launcher UI. </li>
+</ol>
+
+<p>Installation Notes：
+1. When installing by pushing in /system/app to cover system Launcher, corresponding so file should be pushed into /system/lib. Corresponding so file can unzip apk file, and replicate and obtain all the so file under lib.
+2. Adb install (normal installation) ,  No special treatment needs to be done.</p>
+
+<p>Note: functions such as Phone and Radio need to be integrated by yourself. </p>
+
+<h1 id="toc_68">Echo cancellation and noise suppresion（ECNS）</h1>
+
+<p>Most voice applications have an unavoidable pain point, that is, the MIC has to record the sound coming from the speaker of the device (abbreviated as the Speaker signal, such as music, TTS, etc.), the sound from device and human voice are sent to the speech engine together as voice recordings, which reduce the recognition rate. At present, mainstream voice technology still cannot automatically distinguish voice from mingled sound signals. In this case, the voice engine always receives mingled signals, which is much less effective than pure voice input.</p>
+
+<p>The voice environment of Auto is much more complicated than the voice environment of mobilephone. For example, in a mobilephone scene, users can use the MIC to record voice, which is close to the mouth and can effectively avoid other interferences, and it is also convenient to turn off the sound  manually. However, in the auto scene, the MIC is at least one arm away from the user. To ensure the user&#39;s driving safety, it is not applicable to require the users to lower the device speaker volume in order to use voice command.</p>
+
+<p>To meet the demands of different partners, DuerOS has developed two algorithms which are software noise suppression and hardware noise suppression, to meet the demands of different products positioning. According to the current evaluation, the effects of hardware noise suppression solution is better than the effects of software noise suppression solution.</p>
+
+<h2 id="toc_69">Hardware noise suppression solution</h2>
+
+<p>For details, please refer to:
+<a href="https://github.com/ApolloAuto/apollo-DuerOS/tree/master/DSP-Solution-For-DuerOS">Hardware noise suppression solution</a></p>
+
+<h2 id="toc_70">Software noise suppression solution</h2>
+
+<p>Baidu Software noise suppression solution adopts Acoustic Echo Cancelling (AEC) acoustic echo cancellation technology. This technology originated in the development of telephone communications and VOIP. The following diagram shows a communication system that uses the AEC algorithm. In this example，the acoustic coupling between the microphone and the speaker at the near-end of the communication link produces echoes, which results in significant interference echoes at the far-end. In this case, the running near-end AEC algorithm will suppress echoes and improve system performance.
+<img src="img/aec_en.png" alt="Echo cancellation">
+The basic principles and steps are as follows：</p>
+
+<ul>
+<li>The voice signal sent to the near-end speaker is sampled as the echo cancellation reference signal Speaker signal.</li>
+<li>Near-end MIC receives voice input as MIC signal</li>
+<li>Correlation analysis for MIC signals and Speaker signals (initial time delay and compare window).</li>
+<li>Treatment of Adaptive filter noise suppression.</li>
+</ul>
+
+<p>The AEC algorithm used by Baidu DuerOS Auto is provided by Baidu&#39;s voice technology department. This algorithm has been applied to a variety of car devices and is a high robustness algorithm.</p>
+
+<h3 id="toc_71">Key dependency</h3>
+
+<p>Baidu has already implemented the echo cancellation algorithm, so the key dependency in the engineering phase is how to obtain the Speaker signals. We have two requirements for this signal.：</p>
+
+<ul>
+<li>When the client is recieving MIC signals, it can also continuously receive the Speaker signals in the same time.</li>
+<li>The MIC signal and the Speaker signals obtained from the bottom layer must be synchronized, and the time delay between the two must be strictly controlled within 400ms.</li>
+</ul>
+
+<p>To obtain a high-quality speaker signals, it is recommended to modify the Linux driver layer or modify the IIS bus (Inter-IC Sound, integrated circuit built-in audio bus) to obtain the Speaker signals. Because only the Linux driver layer or IIS is closest to the Codec hardware, and usually the same Codec chip is used for recording and playing, the same sampling rate will be used. Therefore, in the same sampling period, recieved Speaker signals and MIC signals should be aligned. Strictly speaking, there will be no time difference, which is the key to achieve good performance. If rely on pure software algorithms for dynamic alignment, it is very CPU-intensive and the effect is not guaranteed. The entire technical process is as follows：</p>
+
+<ul>
+<li>The client opens the recording device and requires the system to do two-channel stereo recording. Taking Android system as an example:</li>
+</ul>
+
+<div><pre><code class="language-java">AudioRecord recordInstance = new AudioRecord(audioSource,
+   RECORD_SAMPLE_RATE_16K,
+   AudioFormat.CHANNEL_IN_STEREO, 
+   AudioFormat.ENCODING_PCM_16BIT, 
+   DEFAULT_BUFFER_SIZE);</code></pre></div>
+
+<ul>
+<li>The Linux driver layer or IIS bus layer records after receiving the client call, the recieved MIC signals is put in the left sound channel.</li>
+<li>Meanwhile, the Linux driver layer or the IIS bus layer puts Speaker signals which is sent to the speaker in the right sound channel.</li>
+<li>The client will separate the received stereo data into two signals.</li>
+<li>The client then takes these two signals to AEC module processing.</li>
+<li>After that，the client sends the AEC-processed audio stream to the Baidu voice engine for identification.</li>
+</ul>
+
+<h3 id="toc_72">integrating process</h3>
+
+<p>Cooperative OEMs can evaluate internally whether the Speaker signals can be obtained from Linux driver layer or IIS bus layer.
+After it is determined to be feasible, a demo can be developed to locally store the MIC signals and the Speaker signals respectively in the form of PCM streams, then send them to Baidu for evaluation.
+Baidu will verify whether these two files meet the algorithm requirements, and it will be processed by the AEC module, all the signals will be stored for analysis.
+After Baidu confirms that it is feasible, the cooperative OEMs can implement the modification of the Linux driver layer or the IIS bus layer.
+In the process of implementation,  it is necessary to ensure that the MIC signals is sent to the left channel, and the Speaker signals is sent to the right channel; and when there is no music or TTS playing, null data needs to be sent to the right channel.
+After completing the implementation, both parties conducted joint testing to optimize the Barge-In results.</p>
+
+<h3 id="toc_73">SDK-related API</h3>
+
+<p>If the OEMs&#39; equipment already meets the above requirements,  recording-related features of AEC can be set through the relevant interfaces of the CdRecordManager class. See the following interface description for details.</p>
+
+<h4 id="toc_74">setRecordType(RecordType type)</h4>
+
+<p>Set recording-related features of AEC,sample code is as follows:
+<code>
+//Note: This method takes effect only on the first call, and multiple calls are invalid.
+CdRecordManager.getInstance().setRecordType(RecordType type)
+</code></p>
+
+<p>The parameter type is RecordType enumeration, the following types can be set：</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Macro</th>
+<th style="text-align: left">Record type</th>
+<th style="text-align: left">Remarks</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left"><code>INSIDE_RAW</code></td>
+<td style="text-align: left">internal recording</td>
+<td style="text-align: left">No AEC, mono, only MIC signal</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>INSIDE_AEC_MIC_LEFT</code></td>
+<td style="text-align: left">internal recording</td>
+<td style="text-align: left">with AEC, left channel is MIC, right channel is Speaker</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>INSIDE_AEC_MIC_RIGHT</code></td>
+<td style="text-align: left">internal recording</td>
+<td style="text-align: left">with AEC, right channel is MIC, left channel is Speaker</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>OUTSIDE_RAW</code></td>
+<td style="text-align: left">external recording</td>
+<td style="text-align: left">No AEC, mono, only MIC signal</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>OUTSIDE_AEC_MIC_LEFT</code></td>
+<td style="text-align: left">external recording</td>
+<td style="text-align: left">with AEC, left channel is MIC, right channel is Speaker</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>OUTSIDE_AEC_MIC_RIGHT</code></td>
+<td style="text-align: left">external recording</td>
+<td style="text-align: left">with AEC, right channel is MIC, left channel is Speaker</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>OUTSIDE_AEC_DUAL_CHANNEL</code></td>
+<td style="text-align: left">external recording</td>
+<td style="text-align: left">with AEC，With AEC, MIC and Speaker signals need to be separateD by manufacurers</td>
+</tr>
+</tbody>
+</table>
+
+<p>Note：</p>
+
+<ul>
+<li>If the RecordType is set belong to external recording（<code>OUTSIDE_***</code>），it requires the OEM to implement the recording logic and to transmit the recording data to DuerOS through the interface.</li>
+<li>Setting the callback for the start and end of the recording via the setRecordTool() interface</li>
+<li>Transmit the recording signals to DuerOS through the interface of feedAudioBuffer ().</li>
+</ul>
+
+<h4 id="toc_75">setRecordTool(RecordTool tool)</h4>
+
+<p>Set callback of the recording states, the example code is as follows：</p>
+
+<div><pre><code class="language-java">CdRecordManager.getInstance().setRecordTool(new CdRecordManager.RecordTool() {
+
+            @Override
+            public void startRecord() {
+                LogUtil.d(TAG, &quot;-----startRecord------&quot;);
+                startRecord();
+            }
+
+            @Override
+            public void endRecord() {
+                LogUtil.d(TAG, &quot;-----endRecord------&quot;);
+                endRecord();
+            }
+
+            @Override
+            public void initRecorder() {
+                LogUtil.d(TAG, &quot;-----initRecorder------&quot;);
+                initRecorder();
+            }
+        });</code></pre></div>
+
+<h4 id="toc_76">feedAudioBuffer(byte[] rawData)</h4>
+
+<p>This interface is used for transmitting audio data to DuerOS.</p>
+
+<ul>
+<li>Use when RecordType is<code>OUTSIDE_RAW</code>、<code>OUTSIDE_AEC_MIC_LEFT</code>or<code>OUTSIDE_AEC_MIC_RIGHT</code></li>
+<li>The parameter rawData is the byte array of external recording PCM data.</li>
+<li>When RecordType is<code>OUTSIDE_RAW</code>，The length of the rawData must be 2560.</li>
+<li>When RecordType is<code>OUTSIDE_AEC_MIC_LEFT</code>or<code>OUTSIDE_AEC_MIC_RIGHT</code>，The length of parameter rawData must be 2560*2，Contains MIC signals and Speaker signals at the same time, both are interleaved in units of two-byte.</li>
+</ul>
+
+<h4 id="toc_77">feedAudioBuffer(byte[] micData, byte[] spkData)</h4>
+
+<p>This interface is used to transmitting recording data to DuerOS.</p>
+
+<ul>
+<li>Use when RecordType is<code>OUTSIDE_AEC_DUAL_CHANNEL</code></li>
+<li>The parameter micData is the byte array of the MIC recording PCM, and the length must be 2560.</li>
+<li>The parameter spkData is a byte array of the Speaker reference signals, and the length must be 2560.</li>
+</ul>
+
+<h2 id="toc_78">Suggestion for MIC design</h2>
+
+<p><a name="MIC design suggestion" ></a>
+For this section, please refer to 《Automotive Microphone Hardware_acoustics design guidelines - Baidu Speech V0.1》。</p>
+
+<h3 id="toc_79">Microphone selection reference</h3>
+
+<p>Baidu&#39;s MIC reference solution is compatible with the market&#39;s mainstream microphones. The following two types of microphones are common in the market:</p>
+
+<p>Electret condenser microphone（ECM）：Diameter between 4mm-6mm，Hight between 2mm-3mm（Take sealed gaskets or shields into account, there may be 1mm-2mm more for each index.）</p>
+
+<p>Microelectromechanical sensors（MEMS）：Smaller size, widely used in thinner products, such as mobile phones, tablet computers, and smart TV&#39;s voice remote control.</p>
+
+<p>Overall, the front-facing omnidirectional microphone performs best, followed by bipolar and unipolar microphones. Detailed indicators are as follows:</p>
+
+<p>Signal-to-noise Ratio：SNR&gt;=60dB</p>
+
+<p>Frequency Range：-4dB/+8dB(300Hz-8kHz)</p>
+
+<p>Sensitivity：For analog microphone，the sensitivity is -38dB(±3dB)；For digital microphone ，the sensitivity is -26dB(±3dB)</p>
+
+<h3 id="toc_80">Microphone position and orientation reference</h3>
+
+<p>Baidu voice engine supports two types of microphone input modes：</p>
+
+<p>1）Single MIC without noise suppression algorithm.</p>
+
+<p>2）Dual MIC array with noise suppression algorithm.</p>
+
+<p>For dual MIC array，we have two advices：</p>
+
+<p>1）The distance between the left and right MICs is 50-80mm.</p>
+
+<p>2）It would be better to make the MIC&#39;s mounting orientation face the user, to ensure less distortion.</p>
+
+<p>When designing a microphone position, it is necessary to try to maximize the distance between the internal noise of the device and the microphone, to away from interference or vibration. For vibration, the silicone case is generally used for shock-absorbing and sealing treatment. For the hardness of silicone, matching verification can be conducted according to the practical situation, and the general requirements are as soft as possible.</p>
+
+<h3 id="toc_81">Microphone case requirements reference</h3>
+
+<p>In general, the design of the microphone case depends on the selected type of microphone. The omnidirectional microphone is the simplest to install. It requires only one opening to receive the ambient sounds, while the bipolar and unipolar microphones require two openings per microphone, and each opening corresponds to the line direction of the microphone, this mechanism will result in a more complex closed-loop design of the microphone.</p>
+
+<h3 id="toc_82">Power amplify design reference</h3>
+
+<p>The distance between the speaker and the microphone would better to be far enough, the sound pressure from the speaker to the microphone dose not to exceed 80 dB (measured at the microphone), and the SNR of the human voice volume and the speaker volume intensity is not lower than -15 dB (the sound pressure from voice to the microphone is about 65 decibel).
+suggested debugging step:</p>
+
+<ul>
+<li>At the maximum volume of the speaker, make sure the microphone recording is not clipped；</li>
+<li>Performing a wakeup test at a distance of 60-100cm from the microphone under the maximum volume of the speaker. If the wakeup function cannot be normally performed, the gain of the power amplifier needs to be adjusted until it can be normally woke up.</li>
+</ul>
+
+<h1 id="toc_83">Special instructions of rearview mirror version</h1>
+
+<p>For the characteristics of the rearview mirror, DuerOS dose some functional adjustment and UI adaptation. There are:</p>
+
+<ul>
+<li>Car DVR section：Need DuerOS developers to integrate the function of car DVR through this access point.</li>
+<li>Telephone section：Need DuerOS developer to integrate system Bluetooth phone through this access point.</li>
+<li>Setting section：Need DuerOS developers to integrate the machine system settings through this access point.</li>
+</ul>
+
+<h1 id="toc_84">Cloud semantic services</h1>
+
+<h2 id="toc_85">Outline</h2>
+
+<p>The cloud semantic service includes two capabilities: semantic analysis and result recall. The partner directly submits the ASR-recognized text to the cloud through the interface. then the content containing the recall result can be obtained.</p>
+
+<p><a href="#What%20does%20DuerOS%20contain">Integrate instruction of Baidu DuerOS Auto cloud API.docx</a></p>
+
+<h1 id="toc_86">Third-party system vision specification</h1>
+
+<p>Please refer to<a href="#What%20does%20DuerOS%20contain">《Baidu DuerOS Auto Third-party system vision specification.pdf》</a></p>
+
+<h1 id="toc_87">Process of DuerOS test &amp; acceptance</h1>
+
+<p><a name="Process of DuerOS test & acceptance" ></a></p>
+
+<h2 id="toc_88">Quality Certification System</h2>
+
+<p>In order to guarantee the quality of Baidu DuerOS and user experience, we have developed a series of test and acceptance procedures to conduct a comprehensive quality inspection of various DuerOS modules to determine whether they are qualified and whether they meet the mass production standards. The test &amp; acceptance mainly includes four links: development joint debugging, full function acceptance, acceptance by the partner, mass production acceptance (as shown in the figure below). Any test that does not passed required to be repaired by the relevant person in charge until passing, then the follow-up tests can be conducted.</p>
+
+<p><img src="img/test_process_en.png" alt="DuerOS testing process"></p>
+
+<h3 id="toc_89">Joint debugging</h3>
+
+<p>The development of joint debugging is mainly undertaken by the R&amp;D staffs of both parties, ensuring that DuerOS&#39;s core functions can be used normally on partners&#39; devices.</p>
+
+<p>After the development of joint debugging is completed (the basic function is completed), partners must complete the following two tasks before entering the full-function acceptance stage.：</p>
+
+<ul>
+<li>To provide hardware and software environment of the Head unit. To provide DuerOS-avaliable Head unit, Head unit system, as well as relevant accessories and system configuration documentation during the use of DuerOS.<strong>If there is an update version of Head unit system, please inform Baidu DuerOS team to update. The Head unit is better to be the target mass production Head unit or the same series Head unit.</strong></li>
+<li>To provide relevant test reports and documents. After completing the developmen t of joint debugging development, the partner must perform basic function self-test to ensure that it can meet the requirements for full-featured test before entering the full-featured acceptance process. The following documents and test reports must be provided to Baidu, see following table for details:</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Number</th>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Form</th>
+<th style="text-align: left">media</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">1</td>
+<td style="text-align: left">Basic function test report</td>
+<td style="text-align: left">document</td>
+<td style="text-align: left">e-document/paper</td>
+</tr>
+<tr>
+<td style="text-align: left">2</td>
+<td style="text-align: left">Project records--issues list</td>
+<td style="text-align: left">table</td>
+<td style="text-align: left">e-document/paper</td>
+</tr>
+</tbody>
+</table>
+
+<p>1)  Basic function test report.The basic function test has been passed，please refer to<a href="#What%20does%20DuerOS%20contain">《Baidu DuerOS auto basic function test Case.xlsx》</a>；</p>
+
+<p>2)  Issues list.The partner and Baidu jointly maintain this document，All the processes of development, testing, acceptance, and regression are based on this document，For specific template, please refer to <a href="#What%20does%20DuerOS%20contain">《Your company name-DuerOS Project records.xlsx》</a>。</p>
+
+<h3 id="toc_90">full-featured acceptance</h3>
+
+<p>The full-featured acceptance mainly refers to a series of full-featured tests and acceptances conducted by Baidu tester according to the documents and reports provided by the partner after Baidu and the partner passed the joint debugging and reached the requirements of full-featured acceptance, Baidu will provide corresponding test reports and issue lists.</p>
+
+<p>In the full-featured acceptance stage, Baidu conduct the following two tasks, which takes 2 to 3 weeks： </p>
+
+<ul>
+<li> Conducting a series of tests，including functional tests, performance tests, stability tests, etc. of DuerOS&#39;s various functional modules, and generating corresponding test reports after the test is completed； </li>
+<li>  Record the problems found in the acceptance process, the problems should be recorded into the issue list, and share the results with the partners to solve them together.；</li>
+</ul>
+
+<p>About the solutions to the problems during tests:</p>
+
+<ul>
+<li>The problems that make the users cannot normal use the functions must be solved；</li>
+<li>For occasional problems, the problem provider needs to reproduce the problems, finding a reproduce path or capture a effective logging to repair.；</li>
+<li>For problems that have extremely low occurance rate and have little impact on users&#39;s usage, it is recommended to lower the priority of the subsequent treatment</li>
+</ul>
+
+<h3 id="toc_91">Partner acceptance</h3>
+
+<p>After the full-featured acceptance test, the partner can perform a series of system tests, drive tests, and other test to look for problems. If it is Baidu&#39;s problem, it can be written into the issue list and then sent to Baidu by email for resolution; If it is the partner&#39;s problem, the partner is required to fix and test the corresponding problems until all the problems are solved.</p>
+
+<p>Partner output items：</p>
+
+<ul>
+<li>  All the functional use cases<a href="#What%20does%20DuerOS%20contain">《Baidu DuerOS auto basic function tesing Case.xlsx》</a>tesing result；</li>
+<li>  Problem fix list and verification results can be recorded and maintained through issue lists.</li>
+<li>  If there is a left over problem, please indicate the reason in the issue list.</li>
+</ul>
+
+<h3 id="toc_92">Mass production acceptance</h3>
+
+<p>The mass production version acceptance means Baidu use the Head unit provided by the partner to conduct the final verification of the DuerOS basic functions. When the verification result is &quot;pass&quot;, the partner can conduct mass production. The acceptance takes 1 to 2 weeks.</p>
+
+<p>Partner deliverable item：</p>
+
+<ul>
+<li>  Mass production Head unit, Head unit needs to be equipped with the system which is going to be mass produced；</li>
+<li>  The report of Function test and problem fix result ；</li>
+<li>  List of left over problems and reasons；</li>
+</ul>
+
+<p>Baidu output items：</p>
+
+<ul>
+<li>Acceptance pass criteria：
+
+<ul>
+<li> All the DuerOS function modules operate normally，all the function testing use cases passed；</li>
+<li>Software interface is uer-friendly，easy for interaction，and meet Head unit HMI design specifications；</li>
+<li>When the Head unit system uses words with ”DuerOS” related prompts, negotiating with Baidu in advance is required；</li>
+<li>No P0（serious），P1 level（general）above BUG.</li>
+</ul></li>
+<li>Mass production acceptance conclusion: pass/fail；</li>
+</ul>
+
+
+
+
+
+	          	</article>
+	        </div>
+		</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+	$('#tree').ztree_toc({
+		is_auto_number:true,
+		documment_selector:'.markdown-body',
+	  ztreeStyle: {
+	    width:'260px',
+	    overflow: 'auto',
+	    position: 'fixed',
+	    'z-index': 2147483647,
+	    border: '0px none',
+	    left: '0px',
+	    top: '0px'
+	}
+	});
+});
+//-->
+</SCRIPT>
+

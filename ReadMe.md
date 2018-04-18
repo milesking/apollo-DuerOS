@@ -12,6 +12,10 @@ All the business logic is on the mobilephone side，and the vehicle side  is pri
 
 CarLife mobilephone terminal support iOS and Android platform, vehicle terminal support Android, Linux, WINCE, QNX and other platforms.
 
+## CarLifeVehicleLib
+[CarLifeVehicleLib](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/CarLifeVehicleLib)is a C++ based cross platform dynamic library, which realizes the function of channel establishment, data sending and receiving, protocol parsing and packing in HU CarLife. Using this library can speed up the development of CarLife in HU.
+
+
 ## DuerOS Launcher
 Lanucher is the interface of the first user graphical interaction of the Android terminal,is the start of the installation of other applications on the terminal entrance(Telephone, radio, and so on need to be connected to app).
 ![Launcher Screen](Launcher.jpeg)
@@ -26,3 +30,5 @@ Lanucher is the interface of the first user graphical interaction of the Android
 ![DSPSolution](DSPDesign.png)
 Front-end signal acquisition is completed through a set of MIC array (2~3 MIC), while the voice signal processing is achieved by DSP. The DSP chips embedded into the motherboard of the vehicle would work on echo’s noise cancellation and directional voice pick-up, and then convey the processed signal to the main CPU layer, and finally the signals would flow into the Baidu Voice ASR Engine.
 
+## DuerOS Auto Spec
+[DuerOS Auto Spec](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/DuerOS-Auto-Spec)is the integration guide of DuerOS Auto,including the integration of the DuerOS Auto software and hardware requirements, the access process description,  functions and  interfaces description, the test and acceptance process ,etc. The partner OEM can carry out DuerOS Auto according to this document.
