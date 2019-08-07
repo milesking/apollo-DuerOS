@@ -29,7 +29,7 @@ For the communication protocol between the car terminal and the mobile
 terminal,please refer to<<Baidu CarLife Integration Specification>>
 
 ## CarLife Vehicle Hardware Requirements:
-* CPU : 600HZ+
+* CPU : 600MHZ+
 * USB : USB2.0 HiSpeed Host,Standard USB?A port
 * Screen Resolution : Support at least 800*480 @60HZ
 * Video : H264 hardware Decoding
