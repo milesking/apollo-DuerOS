@@ -207,7 +207,7 @@ public class EanConnectManager {
                 ConnectNcmDriverClient.getInstance().writeDataToDriver(ConnectNcmDriverClient.PULL_UP_CARLIFE);
                 sleep(SLEEP_TIME_500MS * 2);
                 if (NAGATIVE == eaNativeFd) {
-                    devStatus = eanInit();
+//                    devStatus = eanInit();
                     if (!devStatus) {
                         return;
                     }
@@ -651,7 +651,7 @@ public class EanConnectManager {
                     eanDataLen = JniEanMethod.eanRead(eanData, EAN_BULK_BUFFER_SIZE);
                     if (eanDataLen < 0) {
                         JniEanMethod.closeEan();
-                        devStatus = JniEanMethod.openEan();
+//                        devStatus = JniEanMethod.openEan();
                         if (NAGATIVE == devStatus) {
                             LogUtil.e(TAG, "read thread Open ean port /dev/mfi-ean failed devStatus = " + devStatus);
                             isRunning = false;

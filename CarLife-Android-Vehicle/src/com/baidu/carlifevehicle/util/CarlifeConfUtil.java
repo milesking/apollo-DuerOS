@@ -334,9 +334,28 @@ public class CarlifeConfUtil {
                 }
             }
         } catch (FileNotFoundException e) {
-            LogUtil.e(TAG, "[ERROR]read to file exception 1");
-            e.printStackTrace();
-            readStatus = CONF_FILE_NOT_EXISTS;
+//            LogUtil.e(TAG, "[ERROR]read to file exception 1");
+//            e.printStackTrace();
+//            readStatus = CONF_FILE_NOT_EXISTS;
+            // set default config if bdcf does not exists
+            channelId = "20022100";
+            propertyMap.put("AUDIO_TRACK_TYPE", "0");
+            propertyMap.put("AUDIO_TRACK_NUM", "2");
+            propertyMap.put("AUDIO_TRACK_STREAM_TYPE", "3");
+            propertyMap.put("AUDIO_TTS_REQUEST_FOCUS", "true");
+            propertyMap.put("VOICE_MIC", "0");
+            propertyMap.put("VOICE_WAKEUP", "true");
+            propertyMap.put("NEED_MORE_DECODE_TIME", "false");
+            propertyMap.put("BLUETOOTH_INTERNAL_UI", "false");
+            propertyMap.put("TRANSPARENT_SEND_TOUCH_EVENT", "true");
+            propertyMap.put("VEHICLE_GPS", "false");
+            propertyMap.put("FOCUS_UI", "false");
+            propertyMap.put("MEDIA_SAMPLE_RATE", "0");
+            propertyMap.put("CONNECT_TYPE_ANDROID", "1");
+            propertyMap.put("CONNECT_TYPE_IPHONE", "4");
+            propertyMap.put("AUDIO_TRANSMISSION_MODE=0");
+            propertyMap.put("CONTENT_ENCRYPTION", "true");
+            propertyMap.put("ENGINE_TYPE", "0");
         } catch (Exception e) {
             LogUtil.e(TAG, "[ERROR]read file exception");
             e.printStackTrace();

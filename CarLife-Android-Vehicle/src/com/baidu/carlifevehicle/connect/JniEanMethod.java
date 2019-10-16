@@ -17,7 +17,7 @@ package com.baidu.carlifevehicle.connect;
 
 public class JniEanMethod {
     static {
-        System.loadLibrary("iPhone_ean");
+//        System.loadLibrary("iPhone_ean");
     }
     // Open EA
     public static native int openEan();
