@@ -310,11 +310,11 @@ public class CarlifeConfUtil {
         String line = null;
         String[] keyValue = null;
         int linenum = 1;
+        propertyMap = new HashMap<String, String>();
 
         try {
             bdcf = new File(CONF_FILE_DIR + "/" + CONF_FILE);
             reader = new BufferedReader(new FileReader(bdcf));
-            propertyMap = new HashMap<String, String>();
 
             while ((line = reader.readLine()) != null) {
                 LogUtil.d(TAG, "line " + linenum + ": " + line);
@@ -352,8 +352,8 @@ public class CarlifeConfUtil {
             propertyMap.put("FOCUS_UI", "false");
             propertyMap.put("MEDIA_SAMPLE_RATE", "0");
             propertyMap.put("CONNECT_TYPE_ANDROID", "1");
-            propertyMap.put("CONNECT_TYPE_IPHONE", "4");
-            propertyMap.put("AUDIO_TRANSMISSION_MODE=0");
+            propertyMap.put("CONNECT_TYPE_IPHONE", "1");
+            propertyMap.put("AUDIO_TRANSMISSION_MODE", "0");
             propertyMap.put("CONTENT_ENCRYPTION", "true");
             propertyMap.put("ENGINE_TYPE", "0");
         } catch (Exception e) {

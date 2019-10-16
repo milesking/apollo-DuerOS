@@ -108,7 +108,7 @@ public class EanConnectManager {
         eaNativeFd = NAGATIVE;
         stopEanReadThread();
         stopSocketReadThread();
-        JniEanMethod.closeEan();
+//        JniEanMethod.closeEan();
         LogUtil.e(TAG, "Close ean port /dev/mfi-ean");
     }
 
@@ -650,7 +650,7 @@ public class EanConnectManager {
                     }
                     eanDataLen = JniEanMethod.eanRead(eanData, EAN_BULK_BUFFER_SIZE);
                     if (eanDataLen < 0) {
-                        JniEanMethod.closeEan();
+//                        JniEanMethod.closeEan();
 //                        devStatus = JniEanMethod.openEan();
                         if (NAGATIVE == devStatus) {
                             LogUtil.e(TAG, "read thread Open ean port /dev/mfi-ean failed devStatus = " + devStatus);
