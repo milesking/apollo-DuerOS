@@ -90,6 +90,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
+import android.os.StrictMode;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
@@ -170,6 +171,11 @@ public class CarlifeActivity extends BaseActivity implements SurfaceHolder.Callb
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+        // disable android.os.NetworkOnMainThreadException
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
         mRootView = (ViewGroup) findViewById(R.id.main_root_view);
         PreferenceUtil.getInstance().init(this);
         mCarLifeFragmentManager = new CarLifeFragmentManager(this);

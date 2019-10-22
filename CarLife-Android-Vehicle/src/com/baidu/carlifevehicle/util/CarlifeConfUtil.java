@@ -354,7 +354,7 @@ public class CarlifeConfUtil {
             propertyMap.put("CONNECT_TYPE_ANDROID", "1");
             propertyMap.put("CONNECT_TYPE_IPHONE", "1");
             propertyMap.put("AUDIO_TRANSMISSION_MODE", "0");
-            propertyMap.put("CONTENT_ENCRYPTION", "true");
+            propertyMap.put("CONTENT_ENCRYPTION", "false");
             propertyMap.put("ENGINE_TYPE", "0");
         } catch (Exception e) {
             LogUtil.e(TAG, "[ERROR]read file exception");
