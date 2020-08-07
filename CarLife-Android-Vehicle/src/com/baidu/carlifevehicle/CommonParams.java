@@ -481,7 +481,7 @@ public class CommonParams {
      * 编译开关
      */
     // 通过设置log级别来控制log的输入
-    public static int LOG_LEVEL = Log.ERROR;
+    public static int LOG_LEVEL = Log.VERBOSE;
     // jenkins里对应的build.number
     public static String BUILD_NUMBER = "";
     // 是否拉起车机端的CarLife:ture 拉起车机端CarLife  ; false 不拉起
